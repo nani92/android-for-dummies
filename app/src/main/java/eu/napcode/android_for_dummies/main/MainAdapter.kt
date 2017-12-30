@@ -1,7 +1,6 @@
-package eu.napcode.android_for_dummies
+package eu.napcode.android_for_dummies.main
 
 import android.content.Context
-import android.graphics.drawable.Drawable
 import android.support.annotation.LayoutRes
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -9,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import eu.napcode.android_for_dummies.base.HelpEntry
+import eu.napcode.android_for_dummies.R
 
 class MainAdapter(var context: Context, var helpEntries: ArrayList<HelpEntry>) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
