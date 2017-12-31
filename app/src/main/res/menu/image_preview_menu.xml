@@ -3,8 +3,7 @@
         android:id="@+id/share"
         android:icon="@drawable/ic_action_share"
         android:title="@string/share"
-        app:showAsAction="always"
-        app:actionViewClass="android.widget.ImageButton"/>
+        app:showAsAction="always"/>
 
     <item
         android:id="@+id/share2"
