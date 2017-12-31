@@ -1,11 +1,13 @@
 package eu.napcode.android_for_dummies.sendImage.guide
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.*
 import com.stepstone.stepper.Step
 import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
+import eu.napcode.android_for_dummies.base.OverlayActivity
 
 class ShareFromImagePreviewFragment : Fragment(), Step {
 
@@ -32,8 +34,7 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
 
     override fun onSelected() {
         (activity as SendImageGuideActivity).displayTitle(R.string.gallery)
-
-//        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        (activity as SendImageGuideActivity).startOverlayActivity()
     }
 
     override fun verifyStep(): VerificationError? {
