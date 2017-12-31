@@ -1,4 +1,4 @@
-package eu.napcode.android_for_dummies.sendImage
+package eu.napcode.android_for_dummies.sendImage.guide
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
