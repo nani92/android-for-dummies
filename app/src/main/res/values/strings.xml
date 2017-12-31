@@ -3,4 +3,7 @@
 
     <!--Send image-->
     <string name="send_image_help_entry_name">Send image</string>
+    <string name="show_how_to_send_image">Show me how to send image!</string>
+
+    
 </resources>
