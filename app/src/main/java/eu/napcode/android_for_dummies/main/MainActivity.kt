@@ -20,7 +20,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupRecyclerView() {
         recyclerView.layoutManager = getLayoutManager()
-        recyclerView.adapter = MainAdapter(this, getHelpEntries(this))
+        recyclerView.adapter = MainAdapter(this, getHelpEntries(this)) {
+            startActivity(it.activityIntent)
+        }
     }
 
     private fun getLayoutManager() : LinearLayoutManager {
