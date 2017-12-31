@@ -8,6 +8,12 @@ import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
 
 class SendImageGuideActivity : AppCompatActivity(), StepperLayout.StepperListener {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_send_image_guide)
+    }
+
     override fun onStepSelected(newStepPosition: Int) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
@@ -24,8 +30,4 @@ class SendImageGuideActivity : AppCompatActivity(), StepperLayout.StepperListene
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_send_image_guide)
-    }
 }
