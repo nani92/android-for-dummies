@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".sendImage.SendImageMainActivity"/>
+        <activity android:name=".sendImage.SendImageGuideActivity"/>
     </application>
 
 </manifest>
