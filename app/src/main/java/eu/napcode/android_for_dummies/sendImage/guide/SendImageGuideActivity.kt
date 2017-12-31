@@ -14,7 +14,7 @@ class SendImageGuideActivity : AppCompatActivity() {
         stepperLayout.adapter = SendImageGuideStepperAdapter(supportFragmentManager, this)
     }
 
-    public fun displayTitle(titleId: Int) {
+    fun displayTitle(titleId: Int) {
         supportActionBar!!.title = getString(titleId)
     }
 }
