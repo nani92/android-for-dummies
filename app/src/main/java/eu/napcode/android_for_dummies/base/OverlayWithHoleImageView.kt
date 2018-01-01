@@ -6,11 +6,13 @@ import android.graphics.Paint
 import android.graphics.PorterDuff
 import android.graphics.PorterDuffXfermode
 import android.graphics.RectF
+import android.support.v4.content.ContextCompat
 import android.util.AttributeSet
 import android.view.View
 import android.support.v7.widget.AppCompatImageView
+import eu.napcode.android_for_dummies.R
 
-class OverlayWithHoleImageView(context: Context, attrs: AttributeSet) : AppCompatImageView(context, attrs) {
+class OverlayWithHoleImageView(context: Context) : AppCompatImageView(context) {
 
     private var circleRect: RectF? = null
     private var radius: Int = 0
@@ -31,7 +33,7 @@ class OverlayWithHoleImageView(context: Context, attrs: AttributeSet) : AppCompa
 
         if (circleRect != null) {
             val paint = Paint(Paint.ANTI_ALIAS_FLAG)
-            paint.color = resources.getColor(android.R.color.black)
+            paint.color = ContextCompat.getColor(context, R.color.colorAccentTransparent)
             paint.style = Paint.Style.FILL
             canvas.drawPaint(paint)
 
