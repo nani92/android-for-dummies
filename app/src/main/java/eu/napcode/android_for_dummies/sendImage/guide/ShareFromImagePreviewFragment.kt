@@ -1,13 +1,13 @@
 package eu.napcode.android_for_dummies.sendImage.guide
 
-import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.*
 import com.stepstone.stepper.Step
 import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
-import eu.napcode.android_for_dummies.base.OverlayActivity
+import eu.napcode.android_for_dummies.base.SHOW_VIEW_ELEMENT_LEFT_KEY
+import eu.napcode.android_for_dummies.base.SHOW_VIEW_RIGHT_CORNER
 
 class ShareFromImagePreviewFragment : Fragment(), Step {
 
@@ -34,7 +34,14 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
 
     override fun onSelected() {
         (activity as SendImageGuideActivity).displayTitle(R.string.gallery)
-        (activity as SendImageGuideActivity).startOverlayActivity()
+        (activity as SendImageGuideActivity).startOverlayActivity(getBundle())
+    }
+
+    fun getBundle() : Bundle {
+        var bundle = Bundle()
+        bundle.putBoolean(SHOW_VIEW_RIGHT_CORNER, true)
+
+        return bundle
     }
 
     override fun verifyStep(): VerificationError? {

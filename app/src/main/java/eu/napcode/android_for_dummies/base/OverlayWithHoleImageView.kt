@@ -24,7 +24,14 @@ class OverlayWithHoleImageView(context: Context) : AppCompatImageView(context) {
     fun setCircle(rect: RectF, radius: Int) {
         this.circleRect = rect
         this.radius = radius
-        //Redraw after defining circle
+
+        postInvalidate()
+    }
+
+    fun setRightCorner(width : Int) {
+        this.radius = 600
+        this.circleRect = RectF(width.toFloat() - radius/2, -radius/2f, width.toFloat()*2, radius.toFloat() )
+
         postInvalidate()
     }
 

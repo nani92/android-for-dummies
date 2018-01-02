@@ -5,6 +5,8 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.OverlayActivity
+import eu.napcode.android_for_dummies.base.SHOW_VIEW_ELEMENT_BUNDLE
+import eu.napcode.android_for_dummies.base.SHOW_VIEW_ELEMENT_LEFT_KEY
 import kotlinx.android.synthetic.main.activity_send_image_guide.*
 
 class SendImageGuideActivity : AppCompatActivity() {
@@ -20,7 +22,10 @@ class SendImageGuideActivity : AppCompatActivity() {
         supportActionBar!!.title = getString(titleId)
     }
 
-    fun startOverlayActivity() {
-        startActivity(Intent(this, OverlayActivity::class.java))
+    fun startOverlayActivity(bundle: Bundle) {
+        var intent = Intent(this, OverlayActivity::class.java)
+        intent.putExtra(SHOW_VIEW_ELEMENT_BUNDLE, bundle)
+
+        startActivity(intent)
     }
 }
