@@ -1,14 +1,18 @@
 package eu.napcode.android_for_dummies.sendImage.guide
 
+import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.*
+import android.widget.Toast
 import com.stepstone.stepper.Step
 import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.OverlayActivity
 import eu.napcode.android_for_dummies.base.SHOW_VIEW_RIGHT_CORNER
+
+var OVERLAY_ACTIVITY_REQUEST_CODE = 100
 
 class ShareFromImagePreviewFragment : Fragment(), Step {
 
@@ -39,7 +43,7 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
         var intent = Intent(context, OverlayActivity::class.java)
         intent.putExtra(SHOW_VIEW_RIGHT_CORNER, true)
 
-        startActivity(intent)
+        startActivityForResult(intent, OVERLAY_ACTIVITY_REQUEST_CODE)
     }
 
     override fun verifyStep(): VerificationError? {
@@ -48,5 +52,14 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
 
     override fun onError(error: VerificationError) {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == OVERLAY_ACTIVITY_REQUEST_CODE
+                && resultCode == Activity.RESULT_OK) {
+            Toast.makeText(context, "dupa", Toast.LENGTH_LONG).show()
+        }
     }
 }

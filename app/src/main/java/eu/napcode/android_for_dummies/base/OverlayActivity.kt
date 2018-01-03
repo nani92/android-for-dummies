@@ -1,9 +1,11 @@
 package eu.napcode.android_for_dummies.base
 
+import android.app.Activity
 import android.graphics.RectF
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.DisplayMetrics
+import android.view.View
 
 var SHOW_VIEW_ELEMENT_LEFT_KEY = "left"
 var SHOW_VIEW_ELEMENT_TOP_KEY = "top"
@@ -19,6 +21,10 @@ class OverlayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
 
         var overlayImageView = OverlayWithHoleImageView(this)
+        overlayImageView.setOnClickListener(View.OnClickListener {
+            setResult(Activity.RESULT_OK)
+            finish()
+        })
         setContentView(overlayImageView)
 
         if (intent.getBooleanExtra(SHOW_VIEW_RIGHT_CORNER, false)) {
