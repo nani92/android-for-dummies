@@ -7,7 +7,6 @@ import android.graphics.PorterDuff
 import android.graphics.PorterDuffXfermode
 import android.graphics.RectF
 import android.support.v4.content.ContextCompat
-import android.util.AttributeSet
 import android.view.View
 import android.support.v7.widget.AppCompatImageView
 import eu.napcode.android_for_dummies.R

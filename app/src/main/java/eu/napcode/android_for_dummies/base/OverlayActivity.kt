@@ -24,11 +24,6 @@ class OverlayActivity : AppCompatActivity() {
         var overlayImageView = OverlayWithHoleImageView(this)
         setContentView(overlayImageView)
 
-        var bundle = intent.getBundleExtra(SHOW_VIEW_ELEMENT_BUNDLE)
-        var b = bundle.getBoolean(SHOW_VIEW_RIGHT_CORNER)
-
-        Log.d("N", "" + b)
-
         if (intent.getBundleExtra(SHOW_VIEW_ELEMENT_BUNDLE).getBoolean(SHOW_VIEW_RIGHT_CORNER, false)) {
             var displayMetrics = DisplayMetrics()
             windowManager.defaultDisplay.getMetrics(displayMetrics)
