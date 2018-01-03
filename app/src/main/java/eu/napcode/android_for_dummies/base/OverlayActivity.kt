@@ -4,17 +4,14 @@ import android.graphics.RectF
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.util.DisplayMetrics
-import android.util.Log
 
-public var SHOW_VIEW_ELEMENT_LEFT_KEY = "left"
-public var SHOW_VIEW_ELEMENT_TOP_KEY = "top"
-public var SHOW_VIEW_ELEMENT_RIGHT_KEY = "right"
-public var SHOW_VIEW_ELEMENT_BOTTOM_KEY = "bottom"
-public var SHOW_VIEW_ELEMENT_RADIUS = "radius"
+var SHOW_VIEW_ELEMENT_LEFT_KEY = "left"
+var SHOW_VIEW_ELEMENT_TOP_KEY = "top"
+var SHOW_VIEW_ELEMENT_RIGHT_KEY = "right"
+var SHOW_VIEW_ELEMENT_BOTTOM_KEY = "bottom"
+var SHOW_VIEW_ELEMENT_RADIUS = "radius"
 
-public var SHOW_VIEW_ELEMENT_BUNDLE = "bundle"
-
-public var SHOW_VIEW_RIGHT_CORNER = "corner"
+var SHOW_VIEW_RIGHT_CORNER = "corner"
 
 class OverlayActivity : AppCompatActivity() {
 
@@ -24,7 +21,7 @@ class OverlayActivity : AppCompatActivity() {
         var overlayImageView = OverlayWithHoleImageView(this)
         setContentView(overlayImageView)
 
-        if (intent.getBundleExtra(SHOW_VIEW_ELEMENT_BUNDLE).getBoolean(SHOW_VIEW_RIGHT_CORNER, false)) {
+        if (intent.getBooleanExtra(SHOW_VIEW_RIGHT_CORNER, false)) {
             var displayMetrics = DisplayMetrics()
             windowManager.defaultDisplay.getMetrics(displayMetrics)
             overlayImageView.setRightCorner(displayMetrics.widthPixels)
