@@ -23,13 +23,13 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-       // setHasOptionsMenu(true)
+        setHasOptionsMenu(true)
     }
 
     override fun onResume() {
         super.onResume()
 
-      //  setMenuVisibility(true)
+        setMenuVisibility(true)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -37,8 +37,7 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
     }
 
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        //inflater!!.inflate(R.menu.image_preview_menu, menu)
-        super.onCreateOptionsMenu(menu, inflater)
+        inflater!!.inflate(R.menu.image_preview_menu, menu)
     }
 
     override fun onPrepareOptionsMenu(menu: Menu?) {
