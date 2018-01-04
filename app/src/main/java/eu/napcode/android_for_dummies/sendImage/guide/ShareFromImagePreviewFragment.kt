@@ -40,18 +40,6 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
         inflater!!.inflate(R.menu.image_preview_menu, menu)
     }
 
-    override fun onPrepareOptionsMenu(menu: Menu?) {
-        super.onPrepareOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        return super.onOptionsItemSelected(item)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-    }
-
     override fun onSelected() {
         (activity as SendImageGuideActivity).displayTitle(R.string.gallery)
 
@@ -78,15 +66,9 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
 
         if (requestCode == OVERLAY_ACTIVITY_REQUEST_CODE_SHARE
                 && resultCode == Activity.RESULT_OK) {
-            Toast.makeText(context, "dupa", Toast.LENGTH_LONG).show()
 
-            if ((activity as AppCompatActivity)!!.supportActionBar != null) {
-
-                (activity as SendImageGuideActivity).openOptionsMenu()
-               // (activity as SendImageGuideActivity).invalidateOptionsMenu()
-            }
-
-            //showRightCorner(OVERLAY_ACTIVITY_REQUEST_CODE_SETTINGS)
+            (activity as SendImageGuideActivity).openOptionsMenu()
+            showRightCorner(OVERLAY_ACTIVITY_REQUEST_CODE_SETTINGS)
         }
     }
 }
