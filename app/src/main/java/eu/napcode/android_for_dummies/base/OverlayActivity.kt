@@ -43,14 +43,14 @@ class OverlayActivity : AppCompatActivity() {
             overlayImageView.setRightCorner(displayMetrics.widthPixels)
         } else {
             overlayImageView.setCircle(getRectF(),
-                    intent.getIntExtra(SHOW_VIEW_ELEMENT_RADIUS, 0))
+                    intent.getIntExtra(SHOW_VIEW_ELEMENT_RADIUS, 500))
         }
     }
 
     fun getRectF(): RectF {
-        return RectF(intent.getFloatExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, 0f),
-                intent.getFloatExtra(SHOW_VIEW_ELEMENT_TOP_KEY, 0f),
-                intent.getFloatExtra(SHOW_VIEW_ELEMENT_RIGHT_KEY, 0f),
-                intent.getFloatExtra(SHOW_VIEW_ELEMENT_BOTTOM_KEY, 0f))
+        return RectF(intent.getIntExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, 0).toFloat(),
+                intent.getIntExtra(SHOW_VIEW_ELEMENT_TOP_KEY, 0).toFloat(),
+                intent.getIntExtra(SHOW_VIEW_ELEMENT_RIGHT_KEY, 0).toFloat(),
+                intent.getIntExtra(SHOW_VIEW_ELEMENT_BOTTOM_KEY, 0).toFloat())
     }
 }
