@@ -21,8 +21,6 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
 
         setHasOptionsMenu(true)
         setMenuVisibility(false)
-
-        (activity as SendImageGuideActivity).displayShareAction()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -36,15 +34,8 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
     override fun onSelected() {
         (activity as SendImageGuideActivity).displayTitle(R.string.gallery)
 
-        //showRightCorner(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE)
+        (activity as SendImageGuideActivity).displayShareAction()
         showView(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE, (activity as SendImageGuideActivity).getShareActionRect())
-    }
-
-    fun showRightCorner(requestCode: Int) {
-        var intent = Intent(context, OverlayActivity::class.java)
-        intent.putExtra(SHOW_VIEW_RIGHT_CORNER, true)
-
-        startActivityForResult(intent, requestCode)
     }
 
     fun showView(requestCode: Int, rect: Rect) {

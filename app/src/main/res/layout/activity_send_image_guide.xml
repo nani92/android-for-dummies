@@ -27,7 +27,7 @@
                 android:text="@string/gallery"
                 android:textColor="@android:color/white"/>
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/shareImageButton"
                 style="@style/Widget.AppCompat.ActionButton"
                 android:layout_width="?attr/actionBarSize"
@@ -36,7 +36,7 @@
                 android:src="@drawable/ic_action_share"
                 android:visibility="invisible"/>
 
-            <ImageButton
+            <ImageView
                 android:id="@+id/moreImageButton"
                 style="@style/Widget.AppCompat.ActionButton"
                 android:layout_width="?attr/actionBarSize"

@@ -4,7 +4,7 @@ import android.graphics.Rect
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
-import android.widget.ImageButton
+import android.widget.ImageView
 import eu.napcode.android_for_dummies.R
 import kotlinx.android.synthetic.main.activity_send_image_guide.*
 
@@ -25,22 +25,29 @@ class SendImageGuideActivity : AppCompatActivity() {
     }
 
     fun displayShareAction() {
-        toolbar.findViewById<ImageButton>(R.id.shareImageButton).visibility = View.VISIBLE
+        toolbar.findViewById<ImageView>(R.id.shareImageButton).visibility = View.VISIBLE
     }
 
     fun displayMoreAction() {
-        toolbar.findViewById<ImageButton>(R.id.moreImageButton).visibility = View.VISIBLE
+        toolbar.findViewById<ImageView>(R.id.moreImageButton).visibility = View.VISIBLE
     }
 
     fun getShareActionRect() : Rect {
-        var imageButton = toolbar.findViewById<ImageButton>(R.id.shareImageButton)
+        var imageButton = toolbar.findViewById<ImageView>(R.id.shareImageButton)
 
-        return Rect(imageButton.left, imageButton.top, imageButton.right, imageButton.bottom)
+        return getRectFromView(imageButton)
+    }
+
+    fun getRectFromView(view: View) : Rect {
+        val location = IntArray(2)
+        view.getLocationOnScreen(location)
+
+        return Rect(location[0], 0, location[0] + view.width, view.height)
     }
 
     fun getMoreActionRect() : Rect {
-        var imageButton = toolbar.findViewById<ImageButton>(R.id.moreImageButton)
+        var imageButton = toolbar.findViewById<ImageView>(R.id.moreImageButton)
 
-        return Rect(imageButton.left, imageButton.top, imageButton.right, imageButton.bottom)
+        return getRectFromView(imageButton)
     }
 }
