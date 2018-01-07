@@ -1,6 +1,5 @@
 package eu.napcode.android_for_dummies.sendImage.guide
 
-import android.app.Activity
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
@@ -20,7 +19,6 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
         super.onCreate(savedInstanceState)
 
         setHasOptionsMenu(true)
-        setMenuVisibility(false)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -32,6 +30,7 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
     }
 
     override fun onSelected() {
+        setMenuVisibility(false)
         (activity as SendImageGuideActivity).displayTitle(R.string.gallery)
 
         (activity as SendImageGuideActivity).displayShareAction()
@@ -62,16 +61,16 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == OVERLAY_ACTIVITY_REQUEST_CODE_SHARE
-                && resultCode == Activity.RESULT_OK) {
+        when (requestCode) {
 
-            (activity as SendImageGuideActivity).openOptionsMenu()
-            (activity as SendImageGuideActivity).displayMoreAction()
-            showView(OVERLAY_ACTIVITY_REQUEST_CODE_MORE,
-                    (activity as SendImageGuideActivity).getMoreActionRect(),
-                    getString(R.string.more_tip))
+            OVERLAY_ACTIVITY_REQUEST_CODE_SHARE -> {
+                (activity as SendImageGuideActivity).displayMoreAction()
+                showView(OVERLAY_ACTIVITY_REQUEST_CODE_MORE,
+                        (activity as SendImageGuideActivity).getMoreActionRect(),
+                        getString(R.string.more_tip))
+            }
         }
     }
-
 }
+
 
