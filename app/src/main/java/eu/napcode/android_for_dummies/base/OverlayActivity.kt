@@ -37,6 +37,7 @@ class OverlayActivity : AppCompatActivity() {
     }
 
     fun handleIntent() {
+
         if (intent.getBooleanExtra(SHOW_VIEW_RIGHT_CORNER, false)) {
             var displayMetrics = DisplayMetrics()
             windowManager.defaultDisplay.getMetrics(displayMetrics)
