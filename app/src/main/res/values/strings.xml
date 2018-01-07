@@ -6,5 +6,6 @@
     <string name="show_how_to_send_image">Show me how to send image!</string>
     <string name="gallery">Gallery</string>
     <string name="share">Share</string>
+    <string name="share_tip">Now you should look for \"Share\" icon that could be displayed in toolbar in the top of screen.</string>
 
 </resources>

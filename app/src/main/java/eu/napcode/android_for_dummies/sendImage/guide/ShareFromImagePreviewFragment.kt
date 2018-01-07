@@ -35,15 +35,18 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
         (activity as SendImageGuideActivity).displayTitle(R.string.gallery)
 
         (activity as SendImageGuideActivity).displayShareAction()
-        showView(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE, (activity as SendImageGuideActivity).getShareActionRect())
+        showView(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE,
+                (activity as SendImageGuideActivity).getShareActionRect(),
+                getString(R.string.share_tip))
     }
 
-    fun showView(requestCode: Int, rect: Rect) {
+    fun showView(requestCode: Int, rect: Rect, text: String) {
         var intent = Intent(context, OverlayActivity::class.java)
         intent.putExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, rect.left)
         intent.putExtra(SHOW_VIEW_ELEMENT_TOP_KEY, rect.top)
         intent.putExtra(SHOW_VIEW_ELEMENT_RIGHT_KEY, rect.right)
         intent.putExtra(SHOW_VIEW_ELEMENT_BOTTOM_KEY, rect.bottom)
+        intent.putExtra(DISPLAY_TEXT_VALUE_KEY, text)
 
         startActivityForResult(intent, requestCode)
     }
@@ -64,7 +67,9 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
 
             (activity as SendImageGuideActivity).openOptionsMenu()
             (activity as SendImageGuideActivity).displayMoreAction()
-            showView(OVERLAY_ACTIVITY_REQUEST_CODE_MORE, (activity as SendImageGuideActivity).getMoreActionRect())
+            showView(OVERLAY_ACTIVITY_REQUEST_CODE_MORE,
+                    (activity as SendImageGuideActivity).getMoreActionRect(),
+                    "KKK")
         }
     }
 
