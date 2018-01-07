@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent" xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -11,7 +11,50 @@
         android:background="?attr/colorPrimary"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:titleTextColor="@android:color/white"/>
+        app:title="@string/gallery"
+        app:titleTextColor="@android:color/white">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/toolbar_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="?attr/actionBarSize"
+                android:gravity="center_vertical"
+                android:text="Toolbar Title"
+                android:textColor="@android:color/white"/>
+
+            <ImageButton
+                android:id="@+id/shareImageButton"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_toLeftOf="@id/moreImageButton"
+                android:src="@drawable/ic_action_share"/>
+
+            <ImageButton
+                android:id="@+id/moreImageButton"
+                style="@style/Widget.AppCompat.ActionButton"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/ic_more"
+                android:tint="@android:color/white"/>
+
+        </RelativeLayout>
+
+
+        <!--<FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+        </FrameLayout>-->
+
+    </android.support.v7.widget.Toolbar>
 
     <com.stepstone.stepper.StepperLayout
         xmlns:android="http://schemas.android.com/apk/res/android"

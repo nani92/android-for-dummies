@@ -23,37 +23,37 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setHasOptionsMenu(true)
+       // setHasOptionsMenu(true)
     }
 
     override fun onResume() {
         super.onResume()
 
-        setMenuVisibility(true)
+        //setMenuVisibility(true)
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_share_from_image_preview, container, false)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater!!.inflate(R.menu.image_preview_menu, menu)
-
-        shareView = menu!!.findItem(R.id.share).actionView as ImageView
-        shareView!!.setImageResource(R.drawable.ic_action_share)
-//        Log.d("N", "" + shareView)
+//    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
+//        inflater!!.inflate(R.menu.image_preview_menu, menu)
 //
-        shareView.viewTreeObserver.addOnGlobalLayoutListener {
-            showView(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE)
-            shareView.viewTreeObserver.removeOnGlobalLayoutListener { this }
-        }
-
-//        shareView.post({
-//            run {
-//                showView(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE)
-//            }
-//        })
-    }
+//        shareView = menu!!.findItem(R.id.share).actionView as ImageView
+//        shareView!!.setImageResource(R.drawable.ic_action_share)
+////        Log.d("N", "" + shareView)
+////
+//        shareView.viewTreeObserver.addOnGlobalLayoutListener {
+//            showView(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE)
+//            shareView.viewTreeObserver.removeOnGlobalLayoutListener { this }
+//        }
+//
+////        shareView.post({
+////            run {
+////                showView(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE)
+////            }
+////        })
+//    }
 
     override fun onSelected() {
         (activity as SendImageGuideActivity).displayTitle(R.string.gallery)
