@@ -69,7 +69,7 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
             (activity as SendImageGuideActivity).displayMoreAction()
             showView(OVERLAY_ACTIVITY_REQUEST_CODE_MORE,
                     (activity as SendImageGuideActivity).getMoreActionRect(),
-                    "KKK")
+                    getString(R.string.more_tip))
         }
     }
 
