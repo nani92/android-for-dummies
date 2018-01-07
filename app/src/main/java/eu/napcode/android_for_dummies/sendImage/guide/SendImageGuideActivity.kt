@@ -28,8 +28,18 @@ class SendImageGuideActivity : AppCompatActivity() {
         toolbar.findViewById<ImageButton>(R.id.shareImageButton).visibility = View.VISIBLE
     }
 
+    fun displayMoreAction() {
+        toolbar.findViewById<ImageButton>(R.id.moreImageButton).visibility = View.VISIBLE
+    }
+
     fun getShareActionRect() : Rect {
         var imageButton = toolbar.findViewById<ImageButton>(R.id.shareImageButton)
+
+        return Rect(imageButton.left, imageButton.top, imageButton.right, imageButton.bottom)
+    }
+
+    fun getMoreActionRect() : Rect {
+        var imageButton = toolbar.findViewById<ImageButton>(R.id.moreImageButton)
 
         return Rect(imageButton.left, imageButton.top, imageButton.right, imageButton.bottom)
     }

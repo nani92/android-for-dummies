@@ -2,6 +2,7 @@ package eu.napcode.android_for_dummies.sendImage.guide
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Rect
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.*
@@ -11,7 +12,7 @@ import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.*
 
 var OVERLAY_ACTIVITY_REQUEST_CODE_SHARE = 101
-var OVERLAY_ACTIVITY_REQUEST_CODE_SETTINGS = 102
+var OVERLAY_ACTIVITY_REQUEST_CODE_MORE = 102
 
 class ShareFromImagePreviewFragment : Fragment(), Step {
 
@@ -36,7 +37,7 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
         (activity as SendImageGuideActivity).displayTitle(R.string.gallery)
 
         //showRightCorner(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE)
-        showView(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE)
+        showView(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE, (activity as SendImageGuideActivity).getShareActionRect())
     }
 
     fun showRightCorner(requestCode: Int) {
@@ -46,9 +47,7 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
         startActivityForResult(intent, requestCode)
     }
 
-    fun showView(requestCode: Int) {
-        var rect  = (activity as SendImageGuideActivity).getShareActionRect()
-
+    fun showView(requestCode: Int, rect: Rect) {
         var intent = Intent(context, OverlayActivity::class.java)
         intent.putExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, rect.left)
         intent.putExtra(SHOW_VIEW_ELEMENT_TOP_KEY, rect.top)
@@ -73,7 +72,8 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
                 && resultCode == Activity.RESULT_OK) {
 
             (activity as SendImageGuideActivity).openOptionsMenu()
-            showRightCorner(OVERLAY_ACTIVITY_REQUEST_CODE_SETTINGS)
+            (activity as SendImageGuideActivity).displayMoreAction()
+            showView(OVERLAY_ACTIVITY_REQUEST_CODE_MORE, (activity as SendImageGuideActivity).getMoreActionRect())
         }
     }
 
