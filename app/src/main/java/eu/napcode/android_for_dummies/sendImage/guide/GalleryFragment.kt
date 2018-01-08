@@ -27,5 +27,4 @@ class GalleryFragment : Fragment(), Step {
     override fun onSelected() {
         //TODO implement
     }
-
 }
