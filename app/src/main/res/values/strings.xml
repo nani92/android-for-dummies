@@ -9,5 +9,6 @@
     <string name="choose_image_from_gallery_tip">In your gallery choose image You want to share and click on it to show it on full screen.</string>
     <string name="share_tip">Now you should look for \"Share\" icon that could be displayed in toolbar in the top of screen.</string>
     <string name="more_tip">If it\'s not displayed there you could try to expand menu by tapping on icon like one above and then try to find \"Share\" option.</string>
+    <string name="completed">That\'s all! Good luck!</string>
 
 </resources>

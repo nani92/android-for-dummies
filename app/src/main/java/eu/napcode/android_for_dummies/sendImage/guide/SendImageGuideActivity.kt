@@ -61,9 +61,7 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
 
     override fun onStepSelected(newStepPosition: Int) {}
 
-    override fun onCompleted(completeButton: View?) {
-     //   TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+    override fun onCompleted(completeButton: View?) = finish()
 
     override fun onReturn() {}
 
