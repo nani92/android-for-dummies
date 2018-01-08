@@ -36,7 +36,7 @@ class GalleryFragment : Fragment(), Step {
         intent.putExtra(SHOW_VIEW_ELEMENT_TOP_KEY, imageView3.top)
         intent.putExtra(SHOW_VIEW_ELEMENT_RIGHT_KEY, imageView3.right)
         intent.putExtra(SHOW_VIEW_ELEMENT_BOTTOM_KEY, imageView3.bottom)
-        intent.putExtra(DISPLAY_TEXT_VALUE_KEY, "D")
+        intent.putExtra(DISPLAY_TEXT_VALUE_KEY, getString(R.string.choose_image_from_gallery_tip))
 
         startActivityForResult(intent, OVERLAY_ACTIVITY_REQUEST_CODE_IMAGE)
     }
