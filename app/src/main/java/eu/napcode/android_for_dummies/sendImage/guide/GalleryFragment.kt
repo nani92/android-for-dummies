@@ -20,7 +20,8 @@ class GalleryFragment : Fragment(), Step {
     }
 
     override fun verifyStep(): VerificationError? {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        //return null when user can go further
+        return null
     }
 
     override fun onError(error: VerificationError) {
