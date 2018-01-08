@@ -5,10 +5,13 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.ImageView
+import com.stepstone.stepper.StepperLayout
+import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
+import eu.napcode.android_for_dummies.base.OnProceedListener
 import kotlinx.android.synthetic.main.activity_send_image_guide.*
 
-class SendImageGuideActivity : AppCompatActivity() {
+class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLayout.StepperListener {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +21,7 @@ class SendImageGuideActivity : AppCompatActivity() {
         supportActionBar!!.show()
 
         stepperLayout.adapter = SendImageGuideStepperAdapter(supportFragmentManager, this)
+        stepperLayout.setListener(this)
     }
 
     fun displayTitle(titleId: Int) {
@@ -50,4 +54,18 @@ class SendImageGuideActivity : AppCompatActivity() {
 
         return getRectFromView(imageButton)
     }
+
+    override fun onProceed() {
+        stepperLayout.proceed()
+    }
+
+    override fun onStepSelected(newStepPosition: Int) {}
+
+    override fun onCompleted(completeButton: View?) {
+     //   TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun onReturn() {}
+
+    override fun onError(verificationError: VerificationError?) {}
 }
