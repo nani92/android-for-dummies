@@ -48,15 +48,6 @@
 
         </RelativeLayout>
 
-
-        <!--<FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-
-        </FrameLayout>-->
-
     </android.support.v7.widget.Toolbar>
 
     <com.stepstone.stepper.StepperLayout
@@ -64,7 +55,5 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/stepperLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:ms_stepperType="tabs"/>
-
+        android:layout_height="match_parent"/>
 </FrameLayout>
