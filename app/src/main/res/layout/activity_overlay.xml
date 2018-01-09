@@ -19,6 +19,7 @@
         android:id="@+id/bottomTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:background="@color/whiteTransparent"
         android:textColor="@android:color/black"
         android:textSize="@dimen/big_text_size"
         app:layout_constraintBottom_toBottomOf="parent"

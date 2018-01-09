@@ -19,8 +19,9 @@
 
     <ImageView
         android:id="@+id/shareImageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/minimal_touch_target_size"
+        android:layout_height="@dimen/minimal_touch_target_size"
+        android:layout_marginTop="@dimen/base_margin"
         android:background="@color/colorPrimaryDark"
         android:src="@drawable/ic_action_share"
         app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
@@ -32,6 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_margin"
+        android:theme="@style/ButtonStyle"
         android:text="@string/show_how_to_send_image"
         app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
         app:layout_constraintRight_toLeftOf="@id/guidelineRight"
