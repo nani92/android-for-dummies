@@ -4,6 +4,7 @@
     <!--Send image-->
     <string name="send_image_help_entry_name">Send image</string>
     <string name="show_how_to_send_image">Show me how to send image!</string>
+    <string name="send_image_instruction">In order to send your picture you should look for \"Share\" icon like one presented below in your gallery application image preview.</string>
     <string name="gallery">Gallery</string>
     <string name="share">Share</string>
     <string name="choose_image_from_gallery_tip">In your gallery choose image You want to share and click on it to show it on full screen.</string>
