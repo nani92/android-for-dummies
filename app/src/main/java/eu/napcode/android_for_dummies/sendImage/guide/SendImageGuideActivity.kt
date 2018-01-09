@@ -13,6 +13,8 @@ import kotlinx.android.synthetic.main.activity_send_image_guide.*
 
 class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLayout.StepperListener {
 
+    var displayedAllGuide = false
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_send_image_guide)
@@ -56,7 +58,10 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
     }
 
     override fun onProceed() {
-        stepperLayout.proceed()
+
+        if (displayedAllGuide == false) {
+            stepperLayout.proceed()
+        }
     }
 
     override fun onStepSelected(newStepPosition: Int) {}

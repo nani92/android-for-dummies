@@ -32,6 +32,7 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
     override fun onSelected() {
         setMenuVisibility(false)
         (activity as SendImageGuideActivity).displayTitle(R.string.gallery)
+        (activity as SendImageGuideActivity).displayedAllGuide = true
 
         (activity as SendImageGuideActivity).displayShareAction()
         showView(OVERLAY_ACTIVITY_REQUEST_CODE_SHARE,
