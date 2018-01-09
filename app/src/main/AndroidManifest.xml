@@ -31,6 +31,9 @@
         <activity
             android:name=".base.OverlayActivity"
             android:theme="@style/Theme.AppCompat.Translucent"/>
+
+        <activity android:name=".sendImage.help.HelpSendImageActivity"/>
+        
     </application>
 
 </manifest>
