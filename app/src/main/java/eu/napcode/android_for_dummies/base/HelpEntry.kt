@@ -11,7 +11,7 @@ class HelpEntry(var nameResourceId: Int, var imageResourceId: Int, var activityI
 fun getHelpEntries(context: Context): ArrayList<HelpEntry> {
     val helpEntries : ArrayList<HelpEntry> = ArrayList()
 
-    helpEntries.add(HelpEntry(R.string.send_image_help_entry_name, R.mipmap.ic_launcher, Intent(context, SendImageMainActivity::class.java)))
+    helpEntries.add(HelpEntry(R.string.send_image_help_entry_name, R.drawable.ic_send_image, Intent(context, SendImageMainActivity::class.java)))
 
     return helpEntries
 }

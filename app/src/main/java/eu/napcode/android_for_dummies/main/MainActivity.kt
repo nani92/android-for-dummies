@@ -2,6 +2,7 @@ package eu.napcode.android_for_dummies.main
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatDelegate
 import android.support.v7.widget.LinearLayoutManager
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.getHelpEntries
@@ -12,6 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        AppCompatDelegate.setCompatVectorFromResourcesEnabled(true);
 
         setupRecyclerView()
     }
