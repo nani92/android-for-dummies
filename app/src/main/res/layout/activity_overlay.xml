@@ -19,14 +19,14 @@
         android:id="@+id/bottomTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/whiteTransparent"
+        android:layout_marginBottom="@dimen/base_margin"
+        android:background="@drawable/textview_roundedcorner"
+        android:padding="@dimen/small_margin"
         android:textColor="@android:color/black"
         android:textSize="@dimen/big_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.947"/>
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/guidelineLeft"
