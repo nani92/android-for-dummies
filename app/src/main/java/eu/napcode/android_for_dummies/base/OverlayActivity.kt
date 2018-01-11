@@ -65,6 +65,7 @@ class OverlayActivity : AppCompatActivity() {
         val imageViewAnimation = ObjectAnimator.ofFloat(overlayImageView, "alpha", 0f, 1f)
         imageViewAnimation.duration = ANIMATION_SHORT_DURATION
         makeViewVisibleOnAnimationStart(imageViewAnimation, overlayImageView)
+        imageViewAnimation.startDelay = ANIMATION_SHORT_DELAY
 
         val textViewAnimation = ObjectAnimator.ofFloat(textView, "translationY", displayMetrics.heightPixels / 3f, textView.translationY)
         textViewAnimation.duration = ANIMATION_STANDARD_DURATION
