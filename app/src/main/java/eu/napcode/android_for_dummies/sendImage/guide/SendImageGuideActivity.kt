@@ -1,8 +1,10 @@
 package eu.napcode.android_for_dummies.sendImage.guide
 
+import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.transition.Slide
 import android.util.Log
 import android.view.Menu
 import android.view.MenuInflater
@@ -28,6 +30,8 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
 
         stepperLayout.adapter = SendImageGuideStepperAdapter(supportFragmentManager, this)
         stepperLayout.setListener(this)
+
+      //  window.exitTransition = Slide().setDuration(1000)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

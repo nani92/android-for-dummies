@@ -4,6 +4,9 @@ import android.app.Activity
 import android.graphics.RectF
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.transition.Explode
+import android.transition.Fade
+import android.view.Window
 import eu.napcode.android_for_dummies.R
 import kotlinx.android.synthetic.main.activity_overlay.*
 
@@ -25,11 +28,12 @@ class OverlayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.activity_overlay)
 
         setupImageView()
 
-        bottomTextView.setText(getText())
+        bottomTextView.text = getText()
     }
 
     fun setupImageView() {
