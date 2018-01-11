@@ -31,6 +31,11 @@ class GalleryFragment : Fragment(), Step {
     override fun onError(error: VerificationError) {}
 
     override fun onSelected() {
+        showOverlayView()
+        (activity as SendImageGuideActivity).hideActions()
+    }
+
+    private fun showOverlayView() {
         var intent = Intent(context, OverlayActivity::class.java)
         intent.putExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, imageView3.left)
         intent.putExtra(SHOW_VIEW_ELEMENT_TOP_KEY, imageView3.top)

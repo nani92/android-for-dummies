@@ -1,13 +1,9 @@
 package eu.napcode.android_for_dummies.sendImage.guide
 
-import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.transition.Slide
-import android.util.Log
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.View
 import android.widget.ImageView
 import android.widget.Toast
@@ -30,8 +26,6 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
 
         stepperLayout.adapter = SendImageGuideStepperAdapter(supportFragmentManager, this)
         stepperLayout.setListener(this)
-
-      //  window.exitTransition = Slide().setDuration(1000)
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
@@ -51,6 +45,11 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
     fun displayMoreAction() {
         toolbar.findViewById<ImageView>(R.id.moreImageButton).visibility = View.VISIBLE
         toolbar.findViewById<ImageView>(R.id.moreImageButton).setOnClickListener({openMenu()})
+    }
+
+    fun hideActions() {
+        toolbar.findViewById<ImageView>(R.id.shareImageButton).visibility = View.INVISIBLE
+        toolbar.findViewById<ImageView>(R.id.moreImageButton).visibility = View.INVISIBLE
     }
 
     fun openMenu() {
