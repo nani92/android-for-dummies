@@ -3,8 +3,12 @@ package eu.napcode.android_for_dummies.sendImage.guide
 import android.graphics.Rect
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
+import android.view.Menu
+import android.view.MenuInflater
 import android.view.View
 import android.widget.ImageView
+import android.widget.Toast
 import com.stepstone.stepper.StepperLayout
 import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
@@ -26,6 +30,13 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
         stepperLayout.setListener(this)
     }
 
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater!!.inflate(R.menu.image_preview_menu, menu)
+
+
+        return true
+    }
+
     fun displayTitle(titleId: Int) {
         supportActionBar!!.title = getString(titleId)
     }
@@ -36,6 +47,12 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
 
     fun displayMoreAction() {
         toolbar.findViewById<ImageView>(R.id.moreImageButton).visibility = View.VISIBLE
+        toolbar.findViewById<ImageView>(R.id.moreImageButton).setOnClickListener({openMenu()})
+    }
+
+    fun openMenu() {
+        Toast.makeText(this, "DUPA", Toast.LENGTH_SHORT).show()
+        openOptionsMenu()
     }
 
     fun getShareActionRect() : Rect {
