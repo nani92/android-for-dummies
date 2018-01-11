@@ -1,5 +1,6 @@
 package eu.napcode.android_for_dummies.sendImage.guide
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -54,6 +55,12 @@ class GalleryFragment : Fragment(), Step {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+        if (resultCode == Activity.RESULT_CANCELED) {
+            activity!!.finish()
+
+            return
+        }
 
         when (requestCode) {
             OVERLAY_ACTIVITY_REQUEST_CODE_IMAGE -> {

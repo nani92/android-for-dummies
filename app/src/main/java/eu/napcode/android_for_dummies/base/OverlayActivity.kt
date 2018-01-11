@@ -13,7 +13,6 @@ import android.animation.ObjectAnimator
 import android.util.DisplayMetrics
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
-import android.view.animation.BounceInterpolator
 import android.widget.TextView
 
 public var DISPLAY_TEXT_TOP = 0

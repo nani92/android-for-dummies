@@ -1,5 +1,6 @@
 package eu.napcode.android_for_dummies.sendImage.guide
 
+import android.app.Activity
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
@@ -47,6 +48,12 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+        if (resultCode == Activity.RESULT_CANCELED) {
+            activity!!.finish()
+
+            return
+        }
 
         when (requestCode) {
 
