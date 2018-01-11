@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.sendImage.guide.SendImageGuideActivity
 import eu.napcode.android_for_dummies.sendImage.help.HelpSendImageActivity
-import kotlinx.android.synthetic.main.activity_send_image_main.*
+import kotlinx.android.synthetic.main.send_image_main_content.*
 
 class SendImageMainActivity : AppCompatActivity() {
 

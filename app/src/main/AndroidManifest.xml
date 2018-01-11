@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     package="eu.napcode.android_for_dummies">
 
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
     <application
         android:allowBackup="true"
@@ -22,7 +22,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".sendImage.SendImageMainActivity"/>
+        <activity
+            android:name=".sendImage.SendImageMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name=".sendImage.guide.SendImageGuideActivity"
