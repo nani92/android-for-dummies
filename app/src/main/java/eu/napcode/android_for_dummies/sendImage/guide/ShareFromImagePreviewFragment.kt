@@ -15,18 +15,8 @@ var OVERLAY_ACTIVITY_REQUEST_CODE_MORE = 102
 
 class ShareFromImagePreviewFragment : Fragment(), Step {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        setHasOptionsMenu(true)
-    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_share_from_image_preview, container, false)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
-        inflater!!.inflate(R.menu.image_preview_menu, menu)
     }
 
     override fun onSelected() {
