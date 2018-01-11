@@ -11,7 +11,7 @@
         android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
-        <include layout="@layout/send_image_main_toolbar"/>
+        <include layout="@layout/help_entry_main_toolbar"/>
 
     </android.support.design.widget.AppBarLayout>
 
