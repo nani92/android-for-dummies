@@ -1,5 +1,8 @@
 package eu.napcode.android_for_dummies.base
 
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.animation.AnimatorSet
 import android.app.Activity
 import android.graphics.RectF
 import android.os.Bundle
@@ -8,6 +11,10 @@ import eu.napcode.android_for_dummies.R
 import kotlinx.android.synthetic.main.activity_overlay.*
 import android.animation.ObjectAnimator
 import android.util.DisplayMetrics
+import android.view.View
+import android.view.animation.AccelerateDecelerateInterpolator
+import android.view.animation.BounceInterpolator
+import android.widget.TextView
 
 public var DISPLAY_TEXT_TOP = 0
 public var DISPLAY_TEXT_BOTTOM = 1
@@ -24,34 +31,60 @@ var DISPLAY_TEXT_VALUE_KEY = "text"
 class OverlayActivity : AppCompatActivity() {
 
     var DEFAULT_RADIUS = 30
+    lateinit var textView: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_overlay)
 
         setupImageView()
-        setupImageViewAnimation()
+        setupTextView()
 
-        bottomTextView.text = getText()
+        setupAnimations()
     }
 
     fun setupImageView() {
+        overlayImageView.visibility = View.GONE
         overlayImageView.setOnClickListener({
             setResult(Activity.RESULT_OK)
             finish()
         })
 
-
         overlayImageView.setCircle(getRectF(), getRadius())
     }
 
-    fun setupImageViewAnimation() {
+    fun setupTextView() {
+        textView = bottomTextView
+        textView.text = getText()
+        textView.visibility = View.GONE
+    }
+
+    fun setupAnimations() {
         val displayMetrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(displayMetrics)
-        val animation = ObjectAnimator.ofFloat(overlayImageView, "translationY", -displayMetrics.heightPixels.toFloat(), overlayImageView.translationY)
-        animation.duration = ANIMATION_BASE_DURATION
-        animation.startDelay = ANIMATION_DELAY
-        animation.start()
+
+        val imageViewAnimation = ObjectAnimator.ofFloat(overlayImageView, "alpha", 0f, 1f)
+        imageViewAnimation.duration = ANIMATION_SHORT_DURATION
+        makeViewVisibleOnAnimationStart(imageViewAnimation, overlayImageView)
+
+        val textViewAnimation = ObjectAnimator.ofFloat(textView, "translationY", displayMetrics.heightPixels / 3f, textView.translationY)
+        textViewAnimation.duration = ANIMATION_STANDARD_DURATION
+        makeViewVisibleOnAnimationStart(textViewAnimation, textView)
+        textViewAnimation.interpolator = AccelerateDecelerateInterpolator()
+
+        var animatorSet = AnimatorSet()
+        animatorSet.play(textViewAnimation).after(imageViewAnimation)
+        animatorSet.start()
+    }
+
+    fun makeViewVisibleOnAnimationStart(objectAnimator: ObjectAnimator, view: View) {
+        objectAnimator.addListener(object : AnimatorListenerAdapter() {
+
+            override fun onAnimationStart(animation: Animator?) {
+                super.onAnimationStart(animation)
+                view.visibility = View.VISIBLE
+            }
+        })
     }
 
     fun getRectF(): RectF {
