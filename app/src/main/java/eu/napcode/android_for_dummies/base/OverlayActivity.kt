@@ -4,11 +4,10 @@ import android.app.Activity
 import android.graphics.RectF
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.transition.Explode
-import android.transition.Fade
-import android.view.Window
 import eu.napcode.android_for_dummies.R
 import kotlinx.android.synthetic.main.activity_overlay.*
+import android.animation.ObjectAnimator
+import android.util.DisplayMetrics
 
 public var DISPLAY_TEXT_TOP = 0
 public var DISPLAY_TEXT_BOTTOM = 1
@@ -28,10 +27,10 @@ class OverlayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_overlay)
 
         setupImageView()
+        setupImageViewAnimation()
 
         bottomTextView.text = getText()
     }
@@ -44,6 +43,15 @@ class OverlayActivity : AppCompatActivity() {
 
 
         overlayImageView.setCircle(getRectF(), getRadius())
+    }
+
+    fun setupImageViewAnimation() {
+        val displayMetrics = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(displayMetrics)
+        val animation = ObjectAnimator.ofFloat(overlayImageView, "translationY", -displayMetrics.heightPixels.toFloat(), overlayImageView.translationY)
+        animation.duration = ANIMATION_BASE_DURATION
+        animation.startDelay = ANIMATION_DELAY
+        animation.start()
     }
 
     fun getRectF(): RectF {
