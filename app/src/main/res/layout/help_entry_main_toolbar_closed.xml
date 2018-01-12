@@ -1,10 +1,9 @@
-<eu.napcode.android_for_dummies.base.CollapsibleToolbarConstraintLayout
+<android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:minHeight="?attr/actionBarSize"
-    app:layout_scrollFlags="scroll|enterAlways|snap|exitUntilCollapsed">
+    android:layout_height="?attr/actionBarSize"
+    android:minHeight="?attr/actionBarSize">
 
     <android.support.constraint.Guideline
         android:id="@+id/guidelineLeft"
@@ -25,44 +24,36 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_begin="@dimen/base_margin"/>
+        app:layout_constraintGuide_begin="@dimen/small_margin"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/guidelineBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_end="@dimen/base_margin"/>
-
-    <android.support.constraint.Guideline
-        android:id="@+id/guidelineShareImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.2"/>
+        app:layout_constraintGuide_end="@dimen/small_margin"/>
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
         android:adjustViewBounds="true"
         android:transitionName="@string/guide_image_view_transition_name"
+        app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
         app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
-        app:layout_constraintRight_toLeftOf="@id/guidelineRight"
-        app:layout_constraintTop_toTopOf="@id/guidelineTop"
+        app:layout_constraintTop_toBottomOf="@id/guidelineTop"
         app:srcCompat="@drawable/ic_send_image"/>
 
     <TextView
         android:id="@+id/helpEntryToolbarTitle_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/base_margin"
+        android:layout_marginLeft="@dimen/base_margin"
         android:gravity="center"
         android:textColor="@android:color/white"
         android:textSize="@dimen/big_text_size"
         android:transitionName="@string/guide_title_text_view_transition_name"
-        app:layout_constraintBottom_toTopOf="@id/guidelineBottom"
-        app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
-        app:layout_constraintRight_toLeftOf="@id/guidelineRight"
-        app:layout_constraintTop_toBottomOf="@id/imageView"/>
-</eu.napcode.android_for_dummies.base.CollapsibleToolbarConstraintLayout>
+        app:layout_constraintBottom_toBottomOf="@id/imageView"
+        app:layout_constraintLeft_toRightOf="@id/imageView"
+        app:layout_constraintTop_toTopOf="@id/imageView"/>
+</android.support.constraint.ConstraintLayout>

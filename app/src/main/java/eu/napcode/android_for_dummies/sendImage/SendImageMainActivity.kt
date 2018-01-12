@@ -17,6 +17,7 @@ import eu.napcode.android_for_dummies.base.ANIMATION_STANDARD_DURATION
 import eu.napcode.android_for_dummies.sendImage.guide.SendImageGuideActivity
 import eu.napcode.android_for_dummies.sendImage.help.HelpSendImageActivity
 import kotlinx.android.synthetic.main.activity_overlay.*
+import kotlinx.android.synthetic.main.activity_send_image_main.*
 import kotlinx.android.synthetic.main.send_image_main_content.*
 import kotlinx.android.synthetic.main.help_entry_main_toolbar.*
 
@@ -57,7 +58,7 @@ class SendImageMainActivity : AppCompatActivity() {
         //TODO ^Not working
     }
 
-    override fun onBackPressed() {
-        supportFinishAfterTransition()
-    }
+//    override fun onBackPressed() {
+//        //supportFinishAfterTransition()
+//    }
 }

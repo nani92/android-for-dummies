@@ -8,8 +8,6 @@ import android.support.v7.widget.LinearLayoutManager
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.getHelpEntries
 import kotlinx.android.synthetic.main.activity_main.*
-import android.R.attr.transitionName
-import android.app.Activity
 import android.support.v7.widget.AppCompatImageView
 import android.util.Pair
 import android.view.View
