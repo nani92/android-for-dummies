@@ -1,5 +1,6 @@
 package eu.napcode.android_for_dummies.sendImage.guide
 
+import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -31,6 +32,11 @@ class GalleryFragment : Fragment(), Step {
     override fun onError(error: VerificationError) {}
 
     override fun onSelected() {
+        showOverlayView()
+        (activity as SendImageGuideActivity).hideActions()
+    }
+
+    private fun showOverlayView() {
         var intent = Intent(context, OverlayActivity::class.java)
         intent.putExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, imageView3.left)
         intent.putExtra(SHOW_VIEW_ELEMENT_TOP_KEY, imageView3.top)
@@ -49,6 +55,12 @@ class GalleryFragment : Fragment(), Step {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+        if (resultCode == Activity.RESULT_CANCELED) {
+            activity!!.finish()
+
+            return
+        }
 
         when (requestCode) {
             OVERLAY_ACTIVITY_REQUEST_CODE_IMAGE -> {

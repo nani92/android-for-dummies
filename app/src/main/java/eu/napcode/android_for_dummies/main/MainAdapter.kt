@@ -11,7 +11,7 @@ import android.widget.TextView
 import eu.napcode.android_for_dummies.base.HelpEntry
 import eu.napcode.android_for_dummies.R
 
-class MainAdapter(var context: Context, var helpEntries: ArrayList<HelpEntry>, val listener: (HelpEntry) -> Unit) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+class MainAdapter(var context: Context, var helpEntries: ArrayList<HelpEntry>, val listener: OnItemClickListener) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
     override fun getItemCount(): Int = helpEntries.size
 
@@ -24,11 +24,16 @@ class MainAdapter(var context: Context, var helpEntries: ArrayList<HelpEntry>, v
     }
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(helpEntry: HelpEntry, listener: (HelpEntry) -> Unit) {
+        fun bind(helpEntry: HelpEntry, listener: OnItemClickListener) {
             itemView.findViewById<TextView>(R.id.help_name_text_view).setText(helpEntry.nameResourceId)
             itemView.findViewById<ImageView>(R.id.help_image_view).setImageDrawable(context.getDrawable(helpEntry.imageResourceId))
 
-            itemView.setOnClickListener { listener(helpEntry) }
+            itemView.setOnClickListener { listener.onItemClick(helpEntry, itemView) }
         }
     }
 }
+
+public interface OnItemClickListener {
+    fun onItemClick(helpEntry: HelpEntry, view: View)
+}
+

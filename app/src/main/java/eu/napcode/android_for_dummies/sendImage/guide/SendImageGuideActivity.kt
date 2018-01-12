@@ -3,15 +3,17 @@ package eu.napcode.android_for_dummies.sendImage.guide
 import android.graphics.Rect
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.util.Log
+import android.transition.Explode
+import android.transition.Fade
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.View
+import android.view.Window
 import android.widget.ImageView
 import android.widget.Toast
 import com.stepstone.stepper.StepperLayout
 import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
+import eu.napcode.android_for_dummies.base.ANIMATION_SHORT_DURATION
 import eu.napcode.android_for_dummies.base.OnProceedListener
 import kotlinx.android.synthetic.main.activity_send_image_guide.*
 
@@ -21,7 +23,10 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
         setContentView(R.layout.activity_send_image_guide)
+
+        window.enterTransition = Explode().setDuration(ANIMATION_SHORT_DURATION)
 
         setSupportActionBar(toolbar)
         supportActionBar!!.show()
@@ -47,6 +52,11 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
     fun displayMoreAction() {
         toolbar.findViewById<ImageView>(R.id.moreImageButton).visibility = View.VISIBLE
         toolbar.findViewById<ImageView>(R.id.moreImageButton).setOnClickListener({openMenu()})
+    }
+
+    fun hideActions() {
+        toolbar.findViewById<ImageView>(R.id.shareImageButton).visibility = View.INVISIBLE
+        toolbar.findViewById<ImageView>(R.id.moreImageButton).visibility = View.INVISIBLE
     }
 
     fun openMenu() {

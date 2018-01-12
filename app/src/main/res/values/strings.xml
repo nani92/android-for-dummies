@@ -13,4 +13,10 @@
     <string name="completed">That\'s all! Good luck!</string>
     <string name="help_me_send_image">Help me send image!</string>
 
+
+    <!--TRANSITIONS-->
+    <string name="guide_image_view_transition_name" translatable="false">guide icon image view</string>
+    <string name="guide_title_text_view_transition_name" translatable="false">guide title text image view</string>
+
+
 </resources>
