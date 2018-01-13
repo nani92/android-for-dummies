@@ -21,7 +21,7 @@
             app:layout_constraintBottom_toTopOf="@id/guidelineBottom"
             app:layout_constraintEnd_toEndOf="@id/imageGuideline"
             app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="@id/guidelineLeft"
+            app:layout_constraintStart_toStartOf="@id/left_guideline"
             app:layout_constraintTop_toBottomOf="@id/guidelineTop"
             app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_send_image"/>
@@ -34,7 +34,7 @@
             android:textSize="@dimen/big_text_size"
             android:transitionName="@string/guide_title_text_view_transition_name"
             app:layout_constraintBottom_toBottomOf="@id/guidelineBottom"
-            app:layout_constraintEnd_toEndOf="@id/guidelineRight"
+            app:layout_constraintEnd_toEndOf="@id/right_guideline"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/help_image_view"
             app:layout_constraintTop_toBottomOf="@id/guidelineTop"/>
@@ -47,14 +47,14 @@
             app:layout_constraintGuide_percent="0.2"/>
 
         <android.support.constraint.Guideline
-            android:id="@+id/guidelineLeft"
+            android:id="@+id/left_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             app:layout_constraintGuide_begin="@dimen/base_margin"/>
 
         <android.support.constraint.Guideline
-            android:id="@+id/guidelineRight"
+            android:id="@+id/right_guideline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical"

@@ -5,14 +5,14 @@
     android:layout_height="wrap_content">
 
     <android.support.constraint.Guideline
-        android:id="@+id/guidelineLeft"
+        android:id="@+id/left_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="@dimen/base_margin"/>
 
     <android.support.constraint.Guideline
-        android:id="@+id/guidelineRight"
+        android:id="@+id/right_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -45,8 +45,8 @@
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
         android:transitionName="@string/guide_image_view_transition_name"
-        app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
-        app:layout_constraintRight_toLeftOf="@id/guidelineRight"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
         app:layout_constraintTop_toTopOf="@id/guidelineTop"
         app:srcCompat="@drawable/ic_send_image"/>
 
@@ -60,7 +60,7 @@
         android:textSize="@dimen/big_text_size"
         android:transitionName="@string/guide_title_text_view_transition_name"
         app:layout_constraintBottom_toTopOf="@id/guidelineBottom"
-        app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
-        app:layout_constraintRight_toLeftOf="@id/guidelineRight"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
         app:layout_constraintTop_toBottomOf="@id/imageView"/>
 </android.support.constraint.ConstraintLayout>
