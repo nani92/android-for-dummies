@@ -15,9 +15,7 @@ import eu.napcode.android_for_dummies.base.*
 var OVERLAY_ACTIVITY_REQUEST_CODE_SHARE = 101
 var OVERLAY_ACTIVITY_REQUEST_CODE_MORE = 102
 
-class ShareFromImagePreviewFragment : Fragment(), Step {
-
-    lateinit var onProceedListener: OnProceedListener
+class ShareFromImagePreviewFragment : BaseFragmentStep() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_share_from_image_preview, container, false)
@@ -41,16 +39,6 @@ class ShareFromImagePreviewFragment : Fragment(), Step {
         intent.putExtra(DISPLAY_TEXT_VALUE_KEY, text)
 
         startActivityForResult(intent, requestCode)
-    }
-
-    override fun verifyStep(): VerificationError? = null
-
-    override fun onError(error: VerificationError) {}
-
-    override fun onAttach(context: Context?) {
-        super.onAttach(context)
-
-        onProceedListener = context as OnProceedListener
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
