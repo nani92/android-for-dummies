@@ -53,21 +53,23 @@ class OverlayActivity : AppCompatActivity() {
     }
 
     fun setupTextView() {
-        textView = bottom_textView
+        textView = if (intent.getIntExtra(DISPLAY_TEXT_PLACE_KEY, DISPLAY_TEXT_BOTTOM) == DISPLAY_TEXT_BOTTOM) {
+            bottom_textView
+        } else {
+            top_textView
+        }
+
         textView.text = getText()
-        textView.visibility = View.GONE
     }
 
     fun setupAnimations() {
-        val displayMetrics = DisplayMetrics()
-        windowManager.defaultDisplay.getMetrics(displayMetrics)
 
         val imageViewAnimation = ObjectAnimator.ofFloat(overlay_imageView, "alpha", 0f, 1f)
         imageViewAnimation.duration = ANIMATION_SHORT_DURATION
         makeViewVisibleOnAnimationStart(imageViewAnimation, overlay_imageView)
         imageViewAnimation.startDelay = ANIMATION_SHORT_DELAY
 
-        val textViewAnimation = ObjectAnimator.ofFloat(textView, "translationY", displayMetrics.heightPixels / 3f, textView.translationY)
+        val textViewAnimation = ObjectAnimator.ofFloat(textView, "translationY", getTranslationYValueForTextAnimation(), textView.translationY)
         textViewAnimation.duration = ANIMATION_STANDARD_DURATION
         makeViewVisibleOnAnimationStart(textViewAnimation, textView)
         textViewAnimation.interpolator = AccelerateDecelerateInterpolator()
@@ -75,6 +77,17 @@ class OverlayActivity : AppCompatActivity() {
         var animatorSet = AnimatorSet()
         animatorSet.play(textViewAnimation).after(imageViewAnimation)
         animatorSet.start()
+    }
+
+    fun getTranslationYValueForTextAnimation() : Float {
+        val displayMetrics = DisplayMetrics()
+        windowManager.defaultDisplay.getMetrics(displayMetrics)
+
+        return if (intent.getIntExtra(DISPLAY_TEXT_PLACE_KEY, DISPLAY_TEXT_BOTTOM) == DISPLAY_TEXT_BOTTOM) {
+            displayMetrics.heightPixels / 3f
+        } else {
+            -displayMetrics.heightPixels / 3f
+        }
     }
 
     fun makeViewVisibleOnAnimationStart(objectAnimator: ObjectAnimator, view: View) {

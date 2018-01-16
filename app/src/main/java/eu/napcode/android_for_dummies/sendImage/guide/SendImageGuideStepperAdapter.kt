@@ -8,7 +8,8 @@ import com.stepstone.stepper.adapter.AbstractFragmentStepAdapter
 class SendImageGuideStepperAdapter(fm: FragmentManager, context: Context) : AbstractFragmentStepAdapter(fm, context) {
 
     var steps : Array<Step> = arrayOf(GalleryFragment(),
-            ShareFromImagePreviewFragment())
+            ShareFromImagePreviewFragment(),
+            ShareFromImagePreviewFragment2())
 
     override fun getCount(): Int = steps.count()
 
