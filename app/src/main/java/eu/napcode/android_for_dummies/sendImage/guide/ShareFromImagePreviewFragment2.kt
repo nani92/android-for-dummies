@@ -2,11 +2,8 @@ package eu.napcode.android_for_dummies.sendImage.guide
 
 import android.app.Activity
 import android.content.Intent
-import android.graphics.Rect
 import android.os.Bundle
-import android.support.design.internal.BottomNavigationMenuView
 import android.support.v4.app.Fragment
-import android.util.Log
 import android.view.*
 import com.stepstone.stepper.Step
 import com.stepstone.stepper.VerificationError
@@ -26,9 +23,6 @@ class ShareFromImagePreviewFragment2 : Fragment(), Step {
         (activity as SendImageGuideActivity).displayedAllGuide = true
         (activity as SendImageGuideActivity).hideActions()
 
-        var view = (bottomNavigationView.getChildAt(0) as BottomNavigationMenuView).getChildAt(0)
-
-        Log.d("n", view.toString())
         showView(getString(R.string.share_tip2))
     }
 
@@ -39,6 +33,7 @@ class ShareFromImagePreviewFragment2 : Fragment(), Step {
         intent.putExtra(SHOW_VIEW_ELEMENT_RIGHT_KEY, bottomNavigationView.getChildAt(0).right)
         intent.putExtra(SHOW_VIEW_ELEMENT_BOTTOM_KEY, bottomNavigationView.bottom)
         intent.putExtra(DISPLAY_TEXT_VALUE_KEY, text)
+        intent.putExtra(DISPLAY_TEXT_PLACE_KEY, DISPLAY_TEXT_TOP)
 
         startActivityForResult(intent, OVERLAY_ACTIVITY_REQUEST_CODE_BOTTOM_SHARE)
     }

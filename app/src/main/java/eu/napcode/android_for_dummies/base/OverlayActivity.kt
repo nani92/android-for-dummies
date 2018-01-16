@@ -53,9 +53,13 @@ class OverlayActivity : AppCompatActivity() {
     }
 
     fun setupTextView() {
-        textView = bottom_textView
+        textView = if (intent.getIntExtra(DISPLAY_TEXT_PLACE_KEY, DISPLAY_TEXT_BOTTOM) == DISPLAY_TEXT_BOTTOM) {
+            bottom_textView
+        } else {
+            top_textView
+        }
+
         textView.text = getText()
-        textView.visibility = View.GONE
     }
 
     fun setupAnimations() {
