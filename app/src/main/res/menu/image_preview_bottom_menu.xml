@@ -8,4 +8,25 @@
         android:icon="@drawable/ic_action_share"
         android:title="@string/share"
         app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/edit"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_edit"
+        android:title="@string/edit"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/upload"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_cloud_upload"
+        android:title="@string/upload"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/delete"
+        android:enabled="true"
+        android:icon="@drawable/ic_action_delete"
+        android:title="@string/delete"
+        app:showAsAction="ifRoom"/>
 </menu>

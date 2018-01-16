@@ -13,7 +13,9 @@
     <string name="share_tip2">Share icon could also be displayed at the bottom.</string>
     <string name="completed">That\'s all! Good luck!</string>
     <string name="help_me_send_image">Help me send image!</string>
-
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="upload">Upload</string>
 
     <!--TRANSITIONS-->
     <string name="guide_image_view_transition_name" translatable="false">guide icon image view</string>
