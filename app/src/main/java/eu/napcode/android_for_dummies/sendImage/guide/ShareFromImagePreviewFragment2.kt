@@ -29,7 +29,7 @@ class ShareFromImagePreviewFragment2 : Fragment(), Step {
         var view = (bottomNavigationView.getChildAt(0) as BottomNavigationMenuView).getChildAt(0)
 
         Log.d("n", view.toString())
-        showView(getString(R.string.share_tip))
+        showView(getString(R.string.share_tip2))
     }
 
     fun showView(text: String) {
