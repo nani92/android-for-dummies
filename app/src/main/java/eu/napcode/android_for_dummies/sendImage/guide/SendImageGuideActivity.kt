@@ -4,7 +4,6 @@ import android.graphics.Rect
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.transition.Explode
-import android.transition.Fade
 import android.view.Menu
 import android.view.View
 import android.view.Window
@@ -46,17 +45,17 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
     }
 
     fun displayShareAction() {
-        toolbar.findViewById<ImageView>(R.id.shareImageButton).visibility = View.VISIBLE
+        toolbar.findViewById<ImageView>(R.id.share_imageView).visibility = View.VISIBLE
     }
 
     fun displayMoreAction() {
-        toolbar.findViewById<ImageView>(R.id.moreImageButton).visibility = View.VISIBLE
-        toolbar.findViewById<ImageView>(R.id.moreImageButton).setOnClickListener({openMenu()})
+        toolbar.findViewById<ImageView>(R.id.more_imageView).visibility = View.VISIBLE
+        toolbar.findViewById<ImageView>(R.id.more_imageView).setOnClickListener({openMenu()})
     }
 
     fun hideActions() {
-        toolbar.findViewById<ImageView>(R.id.shareImageButton).visibility = View.INVISIBLE
-        toolbar.findViewById<ImageView>(R.id.moreImageButton).visibility = View.INVISIBLE
+        toolbar.findViewById<ImageView>(R.id.share_imageView).visibility = View.INVISIBLE
+        toolbar.findViewById<ImageView>(R.id.more_imageView).visibility = View.INVISIBLE
     }
 
     fun openMenu() {
@@ -65,7 +64,7 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
     }
 
     fun getShareActionRect() : Rect {
-        var imageButton = toolbar.findViewById<ImageView>(R.id.shareImageButton)
+        var imageButton = toolbar.findViewById<ImageView>(R.id.share_imageView)
 
         return getRectFromView(imageButton)
     }
@@ -78,7 +77,7 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
     }
 
     fun getMoreActionRect() : Rect {
-        var imageButton = toolbar.findViewById<ImageView>(R.id.moreImageButton)
+        var imageButton = toolbar.findViewById<ImageView>(R.id.more_imageView)
 
         return getRectFromView(imageButton)
     }
