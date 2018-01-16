@@ -4,12 +4,15 @@ import android.app.Activity
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
+import android.support.design.internal.BottomNavigationMenuView
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.*
 import com.stepstone.stepper.Step
 import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.*
+import kotlinx.android.synthetic.main.fragment_share_from_image_preview2.*
 
 var OVERLAY_ACTIVITY_REQUEST_CODE_BOTTOM_SHARE = 104
 
@@ -23,16 +26,18 @@ class ShareFromImagePreviewFragment2 : Fragment(), Step {
         (activity as SendImageGuideActivity).displayedAllGuide = true
         (activity as SendImageGuideActivity).hideActions()
 
-        showView((activity as SendImageGuideActivity).getShareActionRect(),
-                getString(R.string.share_tip))
+        var view = (bottomNavigationView.getChildAt(0) as BottomNavigationMenuView).getChildAt(0)
+
+        Log.d("n", view.toString())
+        showView(getString(R.string.share_tip))
     }
 
-    fun showView(rect: Rect, text: String) {
+    fun showView(text: String) {
         var intent = Intent(context, OverlayActivity::class.java)
-        intent.putExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, rect.left)
-        intent.putExtra(SHOW_VIEW_ELEMENT_TOP_KEY, rect.top)
-        intent.putExtra(SHOW_VIEW_ELEMENT_RIGHT_KEY, rect.right)
-        intent.putExtra(SHOW_VIEW_ELEMENT_BOTTOM_KEY, rect.bottom)
+        intent.putExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, bottomNavigationView.getChildAt(0).left)
+        intent.putExtra(SHOW_VIEW_ELEMENT_TOP_KEY, bottomNavigationView.top)
+        intent.putExtra(SHOW_VIEW_ELEMENT_RIGHT_KEY, bottomNavigationView.getChildAt(0).right)
+        intent.putExtra(SHOW_VIEW_ELEMENT_BOTTOM_KEY, bottomNavigationView.bottom)
         intent.putExtra(DISPLAY_TEXT_VALUE_KEY, text)
 
         startActivityForResult(intent, OVERLAY_ACTIVITY_REQUEST_CODE_BOTTOM_SHARE)
