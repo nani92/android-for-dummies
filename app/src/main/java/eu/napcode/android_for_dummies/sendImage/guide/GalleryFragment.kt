@@ -33,6 +33,7 @@ class GalleryFragment : Fragment(), Step {
 
     override fun onSelected() {
         showOverlayView()
+        (activity as SendImageGuideActivity).displayTitle(R.string.gallery)
         (activity as SendImageGuideActivity).hideActions()
     }
 
