@@ -5,80 +5,80 @@
     android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/infoTextView"
+        android:id="@+id/info_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/send_image_instruction"
         android:textSize="@dimen/big_text_size"
-        app:layout_constraintBottom_toTopOf="@id/guidelineBottom"
-        app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
-        app:layout_constraintRight_toLeftOf="@id/guidelineRight"
-        app:layout_constraintTop_toBottomOf="@id/guidelineTop"
+        app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/top_guideline"
         app:layout_constraintVertical_bias="0"/>
 
     <ImageView
-        android:id="@+id/shareImageView"
+        android:id="@+id/share_imageView"
         android:layout_width="@dimen/minimal_touch_target_size"
         android:layout_height="@dimen/minimal_touch_target_size"
         android:layout_marginTop="@dimen/base_margin"
         android:src="@drawable/ic_action_share"
         android:tint="@color/colorPrimaryDark"
-        app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
-        app:layout_constraintRight_toLeftOf="@id/guidelineRight"
-        app:layout_constraintTop_toBottomOf="@id/infoTextView"/>
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/info_textView"/>
 
     <Button
-        android:id="@+id/showHowToSendImageButton"
+        android:id="@+id/showHowToSendImage_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_margin"
         android:text="@string/show_how_to_send_image"
         android:theme="@style/ButtonStyle"
-        app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
-        app:layout_constraintRight_toLeftOf="@id/guidelineRight"
-        app:layout_constraintTop_toBottomOf="@id/shareImageView"/>
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/share_imageView"/>
 
     <Button
-        android:id="@+id/helpMeSendImageButton"
+        android:id="@+id/helpMeSendImage_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_margin"
         android:text="@string/help_me_send_image"
         android:theme="@style/ButtonStyle"
-        app:layout_constraintLeft_toRightOf="@id/guidelineLeft"
-        app:layout_constraintRight_toLeftOf="@id/guidelineRight"
-        app:layout_constraintTop_toBottomOf="@id/showHowToSendImageButton"/>
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/showHowToSendImage_button"/>
 
     <android.support.constraint.Guideline
-        android:id="@+id/guidelineLeft"
+        android:id="@+id/left_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="@dimen/base_margin"/>
 
     <android.support.constraint.Guideline
-        android:id="@+id/guidelineRight"
+        android:id="@+id/right_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_end="@dimen/base_margin"/>
 
     <android.support.constraint.Guideline
-        android:id="@+id/guidelineTop"
+        android:id="@+id/top_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_begin="@dimen/base_margin"/>
 
     <android.support.constraint.Guideline
-        android:id="@+id/guidelineBottom"
+        android:id="@+id/bottom_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintGuide_end="@dimen/base_margin"/>
 
     <android.support.constraint.Guideline
-        android:id="@+id/guidelineShareImage"
+        android:id="@+id/shareImage_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"

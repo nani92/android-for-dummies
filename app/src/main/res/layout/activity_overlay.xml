@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <eu.napcode.android_for_dummies.base.OverlayWithHoleImageView
-        android:id="@+id/overlayImageView"
+        android:id="@+id/overlay_imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/bottomTextView"
+        android:id="@+id/bottom_textView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/base_margin"
@@ -24,18 +24,18 @@
         android:textColor="@android:color/black"
         android:textSize="@dimen/big_text_size"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
-        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"/>
+        app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+        app:layout_constraintStart_toStartOf="@+id/left_guideline"/>
 
     <android.support.constraint.Guideline
-        android:id="@+id/guidelineLeft"
+        android:id="@+id/left_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         app:layout_constraintGuide_begin="@dimen/base_margin"/>
 
     <android.support.constraint.Guideline
-        android:id="@+id/guidelineRight"
+        android:id="@+id/right_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"

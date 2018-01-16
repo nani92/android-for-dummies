@@ -43,17 +43,17 @@ class OverlayActivity : AppCompatActivity() {
     }
 
     fun setupImageView() {
-        overlayImageView.visibility = View.GONE
-        overlayImageView.setOnClickListener({
+        overlay_imageView.visibility = View.GONE
+        overlay_imageView.setOnClickListener({
             setResult(Activity.RESULT_OK)
             finish()
         })
 
-        overlayImageView.setCircle(getRectF(), getRadius())
+        overlay_imageView.setCircle(getRectF(), getRadius())
     }
 
     fun setupTextView() {
-        textView = bottomTextView
+        textView = bottom_textView
         textView.text = getText()
         textView.visibility = View.GONE
     }
@@ -62,9 +62,9 @@ class OverlayActivity : AppCompatActivity() {
         val displayMetrics = DisplayMetrics()
         windowManager.defaultDisplay.getMetrics(displayMetrics)
 
-        val imageViewAnimation = ObjectAnimator.ofFloat(overlayImageView, "alpha", 0f, 1f)
+        val imageViewAnimation = ObjectAnimator.ofFloat(overlay_imageView, "alpha", 0f, 1f)
         imageViewAnimation.duration = ANIMATION_SHORT_DURATION
-        makeViewVisibleOnAnimationStart(imageViewAnimation, overlayImageView)
+        makeViewVisibleOnAnimationStart(imageViewAnimation, overlay_imageView)
         imageViewAnimation.startDelay = ANIMATION_SHORT_DELAY
 
         val textViewAnimation = ObjectAnimator.ofFloat(textView, "translationY", displayMetrics.heightPixels / 3f, textView.translationY)

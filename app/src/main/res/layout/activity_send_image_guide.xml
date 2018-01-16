@@ -8,7 +8,7 @@
     tools:context=".sendImage.guide.SendImageGuideActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar_layout"
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fitsSystemWindows="true"
@@ -29,7 +29,7 @@
                 android:layout_height="match_parent">
 
                 <TextView
-                    android:id="@+id/toolbar_title"
+                    android:id="@+id/toolbarTitle_textView"
                     style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
                     android:layout_width="wrap_content"
                     android:layout_height="?attr/actionBarSize"
@@ -38,18 +38,18 @@
                     android:textColor="@android:color/white"/>
 
                 <ImageView
-                    android:id="@+id/shareImageButton"
+                    android:id="@+id/share_imageView"
                     style="@style/Widget.AppCompat.ActionButton"
                     android:layout_width="?attr/actionBarSize"
                     android:layout_height="?attr/actionBarSize"
-                    android:layout_toLeftOf="@id/moreImageButton"
+                    android:layout_toLeftOf="@id/more_imageView"
                     android:clickable="true"
                     android:focusable="true"
                     android:src="@drawable/ic_action_share"
                     android:visibility="invisible"/>
 
                 <android.support.v7.widget.AppCompatImageView
-                    android:id="@+id/moreImageButton"
+                    android:id="@+id/more_imageView"
                     style="@style/Widget.AppCompat.ActionButton"
                     android:layout_width="?attr/actionBarSize"
                     android:layout_height="?attr/actionBarSize"
