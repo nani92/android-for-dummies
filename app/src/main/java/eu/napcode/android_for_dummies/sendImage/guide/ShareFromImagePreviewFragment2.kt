@@ -23,7 +23,6 @@ class ShareFromImagePreviewFragment2 : Fragment(), Step {
         (activity as SendImageGuideActivity).displayedAllGuide = true
         (activity as SendImageGuideActivity).hideActions()
 
-
         showView((activity as SendImageGuideActivity).getShareActionRect(),
                 getString(R.string.share_tip))
     }
