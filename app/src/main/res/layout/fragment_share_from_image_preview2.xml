@@ -16,7 +16,8 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/photo2"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/photo2"/>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNavigationView"
