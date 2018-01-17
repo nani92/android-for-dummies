@@ -47,8 +47,7 @@ class ShareFromImagePreviewFragment2 : BaseFragmentStep() {
         }
 
         when (requestCode) {
-
-            OVERLAY_ACTIVITY_REQUEST_CODE_SHARE -> {
+            OVERLAY_ACTIVITY_REQUEST_CODE_BOTTOM_SHARE -> {
                 onProceedListener.onProceed()
             }
         }
