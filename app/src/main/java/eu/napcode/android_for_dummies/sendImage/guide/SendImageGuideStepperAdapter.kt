@@ -4,6 +4,9 @@ import android.content.Context
 import android.support.v4.app.FragmentManager
 import com.stepstone.stepper.Step
 import com.stepstone.stepper.adapter.AbstractFragmentStepAdapter
+import eu.napcode.android_for_dummies.sendImage.guide.fragments.GalleryFragment
+import eu.napcode.android_for_dummies.sendImage.guide.fragments.ShareFromImagePreviewFragment
+import eu.napcode.android_for_dummies.sendImage.guide.fragments.ShareFromImagePreviewFragment2
 
 class SendImageGuideStepperAdapter(fm: FragmentManager, context: Context) : AbstractFragmentStepAdapter(fm, context) {
 

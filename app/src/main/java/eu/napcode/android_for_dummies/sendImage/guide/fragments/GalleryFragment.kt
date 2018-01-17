@@ -1,4 +1,4 @@
-package eu.napcode.android_for_dummies.sendImage.guide
+package eu.napcode.android_for_dummies.sendImage.guide.fragments
 
 import android.app.Activity
 import android.content.Intent
@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.*
+import eu.napcode.android_for_dummies.sendImage.guide.SendImageGuideActivity
 import kotlinx.android.synthetic.main.fragment_send_image_guide_gallery.*
 
 var OVERLAY_ACTIVITY_REQUEST_CODE_IMAGE = 103
