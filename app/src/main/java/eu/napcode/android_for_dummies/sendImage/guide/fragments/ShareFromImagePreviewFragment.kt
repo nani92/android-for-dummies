@@ -1,16 +1,13 @@
-package eu.napcode.android_for_dummies.sendImage.guide
+package eu.napcode.android_for_dummies.sendImage.guide.fragments
 
 import android.app.Activity
-import android.content.Context
 import android.content.Intent
 import android.graphics.Rect
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.view.*
-import com.stepstone.stepper.Step
-import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.*
+import eu.napcode.android_for_dummies.sendImage.guide.SendImageGuideActivity
 
 var OVERLAY_ACTIVITY_REQUEST_CODE_SHARE = 101
 var OVERLAY_ACTIVITY_REQUEST_CODE_MORE = 102

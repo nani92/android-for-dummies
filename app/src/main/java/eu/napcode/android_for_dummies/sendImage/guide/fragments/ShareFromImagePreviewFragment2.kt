@@ -1,30 +1,27 @@
-package eu.napcode.android_for_dummies.sendImage.guide
+package eu.napcode.android_for_dummies.sendImage.guide.fragments
 
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.support.design.internal.BottomNavigationMenuView
-import android.support.v4.app.Fragment
 import android.view.*
-import com.stepstone.stepper.Step
-import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.*
+import eu.napcode.android_for_dummies.sendImage.guide.SendImageGuideActivity
 import kotlinx.android.synthetic.main.fragment_share_from_image_preview2.*
 
 var OVERLAY_ACTIVITY_REQUEST_CODE_BOTTOM_SHARE = 104
 
-class ShareFromImagePreviewFragment2 : Fragment(), Step {
+class ShareFromImagePreviewFragment2 : BaseFragmentStep() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_share_from_image_preview2, container, false)
     }
 
     override fun onSelected() {
-        (activity as SendImageGuideActivity).displayedAllGuide = true
         (activity as SendImageGuideActivity).hideActions()
 
-        showView(getString(R.string.share_tip2))
+        showView(getString(R.string.share2_tip))
     }
 
     fun showView(text: String) {
@@ -40,10 +37,6 @@ class ShareFromImagePreviewFragment2 : Fragment(), Step {
         startActivityForResult(intent, OVERLAY_ACTIVITY_REQUEST_CODE_BOTTOM_SHARE)
     }
 
-    override fun verifyStep(): VerificationError? = null
-
-    override fun onError(error: VerificationError) {}
-
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
@@ -54,9 +47,8 @@ class ShareFromImagePreviewFragment2 : Fragment(), Step {
         }
 
         when (requestCode) {
-
-            OVERLAY_ACTIVITY_REQUEST_CODE_SHARE -> {
-                //onP
+            OVERLAY_ACTIVITY_REQUEST_CODE_BOTTOM_SHARE -> {
+                onProceedListener.onProceed()
             }
         }
     }
