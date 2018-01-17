@@ -180,31 +180,29 @@
     <ImageView
         android:id="@+id/sixthCell_imageView"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="@dimen/small_margin"
+        android:layout_marginTop="@dimen/small_margin"
+        android:adjustViewBounds="true"
         app:layout_constraintBottom_toTopOf="@+id/sixthCell_textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@id/secondVert_guideline"
         app:layout_constraintTop_toBottomOf="@id/firstHor_guideline"
         app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@mipmap/ic_launcher_round"/>
+        app:srcCompat="@drawable/ic_gmail"/>
 
     <TextView
         android:id="@+id/sixthCell_textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginEnd="@dimen/small_margin"
+        android:layout_marginStart="@dimen/small_margin"
         android:text="@string/share_gmail"
         app:layout_constraintBottom_toTopOf="@+id/secondHor_guideline"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@id/secondVert_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/sixthCell_imageView"/>
+        app:layout_constraintStart_toEndOf="@id/secondVert_guideline"/>
 
 
     <!--Third row-->
