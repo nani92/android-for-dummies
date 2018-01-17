@@ -28,14 +28,11 @@ class ShareFromImagePreviewFragment : BaseFragmentStep() {
     }
 
     fun showView(requestCode: Int, rect: Rect, text: String) {
-        var intent = Intent(context, OverlayActivity::class.java)
-        intent.putExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, rect.left)
-        intent.putExtra(SHOW_VIEW_ELEMENT_TOP_KEY, rect.top)
-        intent.putExtra(SHOW_VIEW_ELEMENT_RIGHT_KEY, rect.right)
-        intent.putExtra(SHOW_VIEW_ELEMENT_BOTTOM_KEY, rect.bottom)
-        intent.putExtra(DISPLAY_TEXT_VALUE_KEY, text)
+        var overlayHelper = OverlayViewHelper(context!!,
+                rect.left, rect.top, rect.right, rect.bottom)
+        overlayHelper.message = text
 
-        startActivityForResult(intent, requestCode)
+        startActivityForResult(overlayHelper.getOverlayIntent(), requestCode)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

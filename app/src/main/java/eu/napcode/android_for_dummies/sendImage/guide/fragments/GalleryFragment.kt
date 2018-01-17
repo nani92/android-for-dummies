@@ -26,14 +26,14 @@ class GalleryFragment : BaseFragmentStep() {
     }
 
     private fun showOverlayView() {
-        var intent = Intent(context, OverlayActivity::class.java)
-        intent.putExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, imageView3.left)
-        intent.putExtra(SHOW_VIEW_ELEMENT_TOP_KEY, imageView3.top)
-        intent.putExtra(SHOW_VIEW_ELEMENT_RIGHT_KEY, imageView3.right)
-        intent.putExtra(SHOW_VIEW_ELEMENT_BOTTOM_KEY, imageView3.bottom)
-        intent.putExtra(DISPLAY_TEXT_VALUE_KEY, getString(R.string.choose_image_from_gallery_tip))
+        var overlayHelper = OverlayViewHelper(context!!,
+                imageView3.left,
+                imageView3.top,
+                imageView3.right,
+                imageView3.bottom)
+        overlayHelper.message = getString(R.string.choose_image_from_gallery_tip)
 
-        startActivityForResult(intent, OVERLAY_ACTIVITY_REQUEST_CODE_IMAGE)
+        startActivityForResult(overlayHelper.getOverlayIntent(), OVERLAY_ACTIVITY_REQUEST_CODE_IMAGE)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {

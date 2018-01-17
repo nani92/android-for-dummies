@@ -26,15 +26,15 @@ class ShareFromImagePreviewFragment2 : BaseFragmentStep() {
 
     fun showView(text: String) {
         var shareButton = (bottomNavigationView.getChildAt(0) as BottomNavigationMenuView).getChildAt(0)
-        var intent = Intent(context, OverlayActivity::class.java)
-        intent.putExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, shareButton.left)
-        intent.putExtra(SHOW_VIEW_ELEMENT_TOP_KEY, bottomNavigationView.top)
-        intent.putExtra(SHOW_VIEW_ELEMENT_RIGHT_KEY, shareButton.right)
-        intent.putExtra(SHOW_VIEW_ELEMENT_BOTTOM_KEY, bottomNavigationView.bottom)
-        intent.putExtra(DISPLAY_TEXT_VALUE_KEY, text)
-        intent.putExtra(DISPLAY_TEXT_PLACE_KEY, DISPLAY_TEXT_TOP)
+        var overlayHelper = OverlayViewHelper(context!!)
+        overlayHelper.left = shareButton.left
+        overlayHelper.top = bottomNavigationView.top
+        overlayHelper.right = shareButton.right
+        overlayHelper.bottom = bottomNavigationView.bottom
+        overlayHelper.message = text
+        overlayHelper.displayTextTop()
 
-        startActivityForResult(intent, OVERLAY_ACTIVITY_REQUEST_CODE_BOTTOM_SHARE)
+        startActivityForResult(overlayHelper.getOverlayIntent(), OVERLAY_ACTIVITY_REQUEST_CODE_BOTTOM_SHARE)
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
