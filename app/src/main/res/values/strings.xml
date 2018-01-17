@@ -17,6 +17,15 @@
     <string name="delete">Delete</string>
     <string name="upload">Upload</string>
 
+    <!--App to share names-->
+    <string name="share_bluetooth">Bluetooth</string>
+    <string name="share_drive">Save to Drive</string>
+    <string name="share_maps">Add to Maps</string>
+    <string name="share_messages">Messages</string>
+    <string name="share_photos">Upload to Photos</string>
+    <string name="share_gmail">Gmail</string>
+    <string name="share_slack">Slack</string>
+
     <!--TRANSITIONS-->
     <string name="guide_image_view_transition_name" translatable="false">guide icon image view</string>
     <string name="guide_title_text_view_transition_name" translatable="false">guide title text image view</string>
