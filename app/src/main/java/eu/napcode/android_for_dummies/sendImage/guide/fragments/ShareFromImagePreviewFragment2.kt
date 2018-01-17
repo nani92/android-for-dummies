@@ -21,7 +21,7 @@ class ShareFromImagePreviewFragment2 : BaseFragmentStep() {
     override fun onSelected() {
         (activity as SendImageGuideActivity).hideActions()
 
-        showView(getString(R.string.share_tip2))
+        showView(getString(R.string.share2_tip))
     }
 
     fun showView(text: String) {

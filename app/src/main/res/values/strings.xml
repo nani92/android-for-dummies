@@ -8,14 +8,18 @@
     <string name="gallery">Gallery</string>
     <string name="share">Share</string>
     <string name="choose_image_from_gallery_tip">In your gallery choose image You want to share and click on it to show it on full screen.</string>
-    <string name="share_tip">Now you should look for \"Share\" icon that could be displayed in toolbar in the top of screen.</string>
-    <string name="more_tip">If it\'s not displayed there you could try to expand menu by tapping on icon like one above and then try to find \"Share\" option.</string>
-    <string name="share_tip2">Share icon could also be displayed at the bottom.</string>
     <string name="completed">That\'s all! Good luck!</string>
     <string name="help_me_send_image">Help me send image!</string>
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
     <string name="upload">Upload</string>
+
+
+    <!--Send image tips-->
+    <string name="share_tip">Now you should look for \"Share\" icon that could be displayed in toolbar in the top of screen.</string>
+    <string name="more_tip">If it\'s not displayed there you could try to expand menu by tapping on icon like one above and then try to find \"Share\" option.</string>
+    <string name="share2_tip">Share icon could also be displayed at the bottom.</string>
+    <string name="share_bottom_sheet_tip">Then you should see panel like this one presented below where you can choose application you want to use to send your image.</string>
 
     <!--App to share names-->
     <string name="share_bluetooth">Bluetooth</string>
