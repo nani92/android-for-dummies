@@ -31,6 +31,8 @@
         <item name="android:textColor">@android:color/white</item>
         <item name="android:backgroundTint">@color/colorAccent</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:padding">@dimen/base_margin</item>
+        <item name="android:gravity">left</item>
     </style>
 
 </resources>

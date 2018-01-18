@@ -29,9 +29,12 @@
 
     <Button
         android:id="@+id/showHowToSendImage_button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_margin"
+        android:drawableLeft="@drawable/ic_show"
+        android:drawablePadding="@dimen/small_margin"
+        android:gravity="left|center_vertical"
         android:text="@string/show_how_to_send_image"
         android:theme="@style/ButtonStyle"
         app:layout_constraintLeft_toRightOf="@id/left_guideline"
@@ -40,9 +43,12 @@
 
     <Button
         android:id="@+id/helpMeSendImage_button"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_margin"
+        android:drawableLeft="@drawable/ic_help"
+        android:drawablePadding="@dimen/small_margin"
+        android:gravity="left|center_vertical"
         android:text="@string/help_me_send_image"
         android:theme="@style/ButtonStyle"
         app:layout_constraintLeft_toRightOf="@id/left_guideline"
