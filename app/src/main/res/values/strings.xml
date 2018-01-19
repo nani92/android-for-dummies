@@ -33,8 +33,7 @@
     <string name="share_slack">Slack</string>
 
     <!--TRANSITIONS-->
-    <string name="guide_image_view_transition_name" translatable="false">guide icon image view</string>
-    <string name="guide_title_text_view_transition_name" translatable="false">guide title text image view</string>
-
+    <string name="help_entry_image_view_transition_name" translatable="false">guide icon image view</string>
+    <string name="help_entry_title_text_view_transition_name" translatable="false">guide title text image view</string>
 
 </resources>
