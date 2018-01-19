@@ -13,6 +13,7 @@ import android.graphics.Color
 import android.transition.Slide
 import android.view.View
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
 import eu.napcode.android_for_dummies.base.ANIMATION_SHORT_DURATION
 import kotlinx.android.synthetic.main.activity_help_send_image.*
 import java.io.File
@@ -27,7 +28,7 @@ class HelpSendImageActivity : AppCompatActivity() {
 
         window.enterTransition = Slide().setDuration(ANIMATION_SHORT_DURATION)
 
-        chooseImage_button.setOnClickListener({EasyImage.openGallery(this, 0) })
+        chooseImage_button.setOnClickListener({ EasyImage.openGallery(this, 0) })
         chooseAppToSendImage_button.setOnClickListener({ shareImage() })
     }
 
@@ -56,6 +57,7 @@ class HelpSendImageActivity : AppCompatActivity() {
     fun loadImage() {
         Glide.with(this)
                 .load(imageFile)
+                .transition(withCrossFade())
                 .into(photoFromGallery_imageView)
     }
 
