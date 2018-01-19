@@ -13,6 +13,8 @@
     <string name="edit">Edit</string>
     <string name="delete">Delete</string>
     <string name="upload">Upload</string>
+    <string name="choose_image_to_send">Choose image to send</string>
+    <string name="choose_app_to_send_image">Choose app to send image</string>
 
 
     <!--Send image tips-->
