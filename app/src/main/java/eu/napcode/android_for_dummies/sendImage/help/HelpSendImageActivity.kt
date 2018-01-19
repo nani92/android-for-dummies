@@ -6,8 +6,10 @@ import eu.napcode.android_for_dummies.R
 import pl.aprilapps.easyphotopicker.EasyImage
 import pl.aprilapps.easyphotopicker.DefaultCallback
 import android.content.Intent
+import android.transition.Slide
 import android.view.View
 import com.bumptech.glide.Glide
+import eu.napcode.android_for_dummies.base.ANIMATION_SHORT_DURATION
 import kotlinx.android.synthetic.main.activity_help_send_image.*
 import java.io.File
 
@@ -18,6 +20,8 @@ class HelpSendImageActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_help_send_image)
+
+        window.enterTransition = Slide().setDuration(ANIMATION_SHORT_DURATION)
 
         chooseImage_button.setOnClickListener({EasyImage.openGallery(this, 0)})
         chooseAppToSendImage_button.setOnClickListener({shareImage()})
