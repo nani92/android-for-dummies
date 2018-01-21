@@ -23,7 +23,7 @@ class SendImageMainActivity : AppCompatActivity() {
         window.enterTransition = Fade().setDuration(ANIMATION_STANDARD_DURATION)
 
         showHowToSendImage_button.setOnClickListener { startActivity(Intent(this, SendImageGuideActivity::class.java), ActivityOptions.makeSceneTransitionAnimation(this).toBundle()) }
-        helpMeSendImage_button.setOnClickListener { startActivity(Intent(this, HelpSendImageActivity::class.java)) }
+        helpMeSendImage_button.setOnClickListener { startActivity(Intent(this, HelpSendImageActivity::class.java), ActivityOptions.makeSceneTransitionAnimation(this).toBundle()) }
 
         setupToolbarTitle()
     }
