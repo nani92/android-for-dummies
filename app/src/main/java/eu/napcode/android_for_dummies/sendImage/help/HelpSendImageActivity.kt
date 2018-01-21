@@ -3,6 +3,7 @@ package eu.napcode.android_for_dummies.sendImage.help
 import android.animation.Animator
 import android.animation.ArgbEvaluator
 import android.animation.ObjectAnimator
+import android.app.Activity
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import eu.napcode.android_for_dummies.R
@@ -10,7 +11,10 @@ import pl.aprilapps.easyphotopicker.EasyImage
 import pl.aprilapps.easyphotopicker.DefaultCallback
 import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
+import android.support.v4.content.FileProvider
 import android.transition.Slide
+import android.util.Log
 import android.view.View
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
@@ -32,11 +36,16 @@ class HelpSendImageActivity : AppCompatActivity() {
         chooseAppToSendImage_button.setOnClickListener({ shareImage() })
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
+        if (resultCode == Activity.RESULT_CANCELED) {
+            return
+        }
 
         EasyImage.handleActivityResult(requestCode, resultCode, data, this, object : DefaultCallback() {
             override fun onImagePicked(imageFile: File?, source: EasyImage.ImageSource?, type: Int) {
+                Log.d("Natalia", "picked " + imageFile)
                 this@HelpSendImageActivity.imageFile = imageFile
                 chosenImage()
             }
@@ -101,7 +110,11 @@ class HelpSendImageActivity : AppCompatActivity() {
     fun createShareIntent(): Intent {
         var intent = Intent(Intent.ACTION_SEND)
         intent.type = "image/jpeg"
-        intent.putExtra(Intent.EXTRA_STREAM, imageFile)
+        intent.putExtra(Intent.EXTRA_STREAM,
+                FileProvider.getUriForFile(this,
+                        "eu.napcode.android_for_dummies.easyphotopicker.fileprovider",
+                        imageFile!!))
+        intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
         return intent
     }
