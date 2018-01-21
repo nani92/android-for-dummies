@@ -16,6 +16,8 @@
     <string name="choose_image_to_send">Choose image to send</string>
     <string name="choose_image_to_send_change">Change image</string>
     <string name="choose_app_to_send_image">Choose app to send image</string>
+    <string name="pick_image_error">There was an error with your image.</string>
+    <string name="share_image_error">There was an error while sharing image.</string>
 
 
     <!--Send image tips-->

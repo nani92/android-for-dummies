@@ -11,6 +11,7 @@ import pl.aprilapps.easyphotopicker.EasyImage
 import pl.aprilapps.easyphotopicker.DefaultCallback
 import android.content.Intent
 import android.graphics.Color
+import android.support.design.widget.Snackbar
 import android.support.v4.content.FileProvider
 import android.transition.Slide
 import android.view.View
@@ -48,7 +49,7 @@ class HelpSendImageActivity : AppCompatActivity() {
             }
 
             override fun onImagePickerError(e: Exception?, source: EasyImage.ImageSource?, type: Int) {
-                //TODO Some error handling
+                Snackbar.make(container_ConstraintLayout, R.string.pick_image_error, Snackbar.LENGTH_SHORT).show()
             }
         })
     }
@@ -96,7 +97,9 @@ class HelpSendImageActivity : AppCompatActivity() {
     fun shareImage() {
 
         if (imageFile == null) {
-            //TODO error
+            Snackbar.make(container_ConstraintLayout,
+                    R.string.share_image_error,
+                    Snackbar.LENGTH_SHORT).show()
 
             return
         }
