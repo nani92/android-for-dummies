@@ -7,7 +7,6 @@
     <string name="send_image_instruction">In order to send your picture you should look for \"Share\" icon like one presented below in your gallery application image preview.</string>
     <string name="gallery">Gallery</string>
     <string name="share">Share</string>
-    <string name="choose_image_from_gallery_tip">In your gallery choose image You want to share and click on it to show it on full screen.</string>
     <string name="completed">That\'s all! Good luck!</string>
     <string name="help_me_send_image">Help me send image!</string>
     <string name="edit">Edit</string>
@@ -21,6 +20,7 @@
 
 
     <!--Send image tips-->
+    <string name="choose_image_from_gallery_tip">In your gallery choose image You want to share and click on it to show it on full screen.</string>
     <string name="share_tip">Now you should look for \"Share\" icon that could be displayed in toolbar in the top of screen.</string>
     <string name="more_tip">If it\'s not displayed there you could try to expand menu by tapping on icon like one above and then try to find \"Share\" option.</string>
     <string name="share2_tip">Share icon could also be displayed at the bottom.</string>
@@ -34,6 +34,8 @@
     <string name="share_photos">Upload to Photos</string>
     <string name="share_gmail">Gmail</string>
     <string name="share_slack">Slack</string>
+
+    <!--PL ^_^ -->
 
     <!--TRANSITIONS-->
     <string name="help_entry_image_view_transition_name" translatable="false">guide icon image view</string>
