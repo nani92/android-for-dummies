@@ -11,10 +11,8 @@ import pl.aprilapps.easyphotopicker.EasyImage
 import pl.aprilapps.easyphotopicker.DefaultCallback
 import android.content.Intent
 import android.graphics.Color
-import android.net.Uri
 import android.support.v4.content.FileProvider
 import android.transition.Slide
-import android.util.Log
 import android.view.View
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade
@@ -45,7 +43,6 @@ class HelpSendImageActivity : AppCompatActivity() {
 
         EasyImage.handleActivityResult(requestCode, resultCode, data, this, object : DefaultCallback() {
             override fun onImagePicked(imageFile: File?, source: EasyImage.ImageSource?, type: Int) {
-                Log.d("Natalia", "picked " + imageFile)
                 this@HelpSendImageActivity.imageFile = imageFile
                 chosenImage()
             }
@@ -108,11 +105,12 @@ class HelpSendImageActivity : AppCompatActivity() {
     }
 
     fun createShareIntent(): Intent {
+        var fileProviderAuthority = "eu.napcode.android_for_dummies.easyphotopicker.fileprovider"
         var intent = Intent(Intent.ACTION_SEND)
         intent.type = "image/jpeg"
         intent.putExtra(Intent.EXTRA_STREAM,
                 FileProvider.getUriForFile(this,
-                        "eu.napcode.android_for_dummies.easyphotopicker.fileprovider",
+                        fileProviderAuthority,
                         imageFile!!))
         intent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
 
