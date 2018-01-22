@@ -14,6 +14,7 @@ import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.ANIMATION_SHORT_DURATION
 import eu.napcode.android_for_dummies.base.OnProceedListener
+import eu.napcode.android_for_dummies.base.getCustomToast
 import kotlinx.android.synthetic.main.activity_send_image_guide.*
 
 class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLayout.StepperListener {
@@ -46,21 +47,21 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
 
     fun displayShareAction() {
         toolbar.findViewById<ImageView>(R.id.share_imageView).visibility = View.VISIBLE
+        toolbar.findViewById<ImageView>(R.id.more_imageView).setOnClickListener({
+            getCustomToast(this, R.string.clicked_on_share).show()
+        })
     }
 
     fun displayMoreAction() {
         toolbar.findViewById<ImageView>(R.id.more_imageView).visibility = View.VISIBLE
-        toolbar.findViewById<ImageView>(R.id.more_imageView).setOnClickListener({openMenu()})
+        toolbar.findViewById<ImageView>(R.id.more_imageView).setOnClickListener({
+            getCustomToast(this, R.string.clicked_on_more).show()
+        })
     }
 
     fun hideActions() {
         toolbar.findViewById<ImageView>(R.id.share_imageView).visibility = View.INVISIBLE
         toolbar.findViewById<ImageView>(R.id.more_imageView).visibility = View.INVISIBLE
-    }
-
-    fun openMenu() {
-        Toast.makeText(this, "DUPA", Toast.LENGTH_SHORT).show()
-        openOptionsMenu()
     }
 
     fun getShareActionRect() : Rect {
@@ -96,4 +97,6 @@ class SendImageGuideActivity : AppCompatActivity(), OnProceedListener, StepperLa
     override fun onReturn() {}
 
     override fun onError(verificationError: VerificationError?) {}
+
+    fun onShareAppClicked(shareAppImageView: View) = getCustomToast(this, R.string.clicked_on_app_share).show()
 }

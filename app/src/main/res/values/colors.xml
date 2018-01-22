@@ -8,4 +8,7 @@
     <color name="colorAccentTransparent">#CC4CAF50</color>
     <color name="whiteTransparent">#99ffffff</color>
     <color name="colorFullyTransparent">#00000000</color>
+
+    <color name="customToastBackgroundColor">#EEF57C00</color>
+    <color name="customToastTextColor">#FFE0B2</color>
 </resources>

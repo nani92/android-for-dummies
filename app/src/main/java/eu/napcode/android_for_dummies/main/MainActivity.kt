@@ -14,7 +14,6 @@ import android.view.View
 import android.widget.TextView
 import eu.napcode.android_for_dummies.base.HelpEntry
 
-
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
