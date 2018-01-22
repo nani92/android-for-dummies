@@ -37,6 +37,11 @@
 
     <!--PL ^_^ -->
 
+    <!--Send image guide toasts-->
+    <string name="clicked_on_more">Bravo! Clicking on this button would expand menu, where \"Share\" option may be present.</string>
+    <string name="clicked_on_share">This is a button with \"Share\" icon.</string>
+    <string name="clicked_on_app_share">You can choose this or any other from presented apps.</string>
+
     <!--TRANSITIONS-->
     <string name="help_entry_image_view_transition_name" translatable="false">guide icon image view</string>
     <string name="help_entry_title_text_view_transition_name" translatable="false">guide title text image view</string>

@@ -21,11 +21,13 @@ class ShareFromImagePreviewFragment2 : BaseFragmentStep() {
     override fun onSelected() {
         (activity as SendImageGuideActivity).hideActions()
 
-        showView(getString(R.string.share2_tip))
+        var shareButton = (bottomNavigationView.getChildAt(0) as BottomNavigationMenuView).getChildAt(0)
+        showView(getString(R.string.share2_tip), shareButton)
+
+        shareButton.setOnClickListener({ getCustomToast(context!!, R.string.clicked_on_share).show() })
     }
 
-    fun showView(text: String) {
-        var shareButton = (bottomNavigationView.getChildAt(0) as BottomNavigationMenuView).getChildAt(0)
+    fun showView(text: String, shareButton: View) {
         var overlayHelper = OverlayViewHelper(context!!)
         overlayHelper.left = shareButton.left
         overlayHelper.top = bottomNavigationView.top
