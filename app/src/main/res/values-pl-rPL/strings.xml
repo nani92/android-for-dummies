@@ -19,7 +19,6 @@
     <string name="pick_image_error">Wystąpił błąd podczas wybierania zdjęcia.</string>
     <string name="share_image_error">Wystąpił błąd podczas udostępniania zdjęcia.</string>
 
-
     <!--Send image tips-->
     <string name="choose_image_from_gallery_tip">W swojej galerii wybierz obrazek, który chcesz wysłać i kliknij na niego by zobaczyć go w trybie pełnoekranowym.</string>
     <string name="share_tip">Teraz powinienś szukać ikony \"Udostępnij\". Może być ona wyświetlona w górnym pasku aplikacji.</string>
@@ -35,5 +34,11 @@
     <string name="share_photos">Prześlij do Zdjęć</string>
     <string name="share_gmail">Gmail</string>
     <string name="share_slack">Slack</string>
+
+
+    <!--Send image guide toasts-->
+    <string name="clicked_on_more">Brawo! Po naciśnięciu tego przycisku powinno rozwinąć się menu, w którym opcja \"Udostępnij\" może być dostępna.</string>
+    <string name="clicked_on_share">To jest guzik z ikoną \"Udostępnij\"</string>
+    <string name="clicked_on_app_share">Możesz wybrać tę lub każdą z inną wyświetlonych aplikacji.</string>
 
 </resources>
