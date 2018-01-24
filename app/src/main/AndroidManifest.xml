@@ -24,6 +24,10 @@
         </activity>
 
         <activity
+            android:name="eu.napcode.kidscalmer.about.AboutActivity"
+            android:theme="@style/AppThemeNoBackground"/>
+
+        <activity
             android:name=".sendImage.SendImageMainActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 

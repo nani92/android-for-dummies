@@ -42,6 +42,13 @@
 
     <!--PL ^_^ -->
 
+    <!--About-->
+    <string name="about">About</string>
+    <string name="author">%1$s%2$sNatalia Jastrzębska @NapCode</string>
+    <string name="by">" by "</string>
+    <string name="icons_title">Icon Credits</string>
+    <string name="author_title">Author</string>
+    <string name="email_error">Could not find email app.</string>
 
     <!--TRANSITIONS-->
     <string name="help_entry_image_view_transition_name" translatable="false">guide icon image view</string>

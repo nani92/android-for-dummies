@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:id="@+id/scrollView"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--HEADER-->
+
+        <ImageView
+            android:id="@+id/logoImageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@id/guidelineLogo"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+            app:layout_constraintRight_toRightOf="@id/guidelineRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="@+id/guidelineTop"
+            app:srcCompat="@drawable/ic_logo"/>
+
+        <ImageView
+            android:id="@+id/nameImageView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:adjustViewBounds="true"
+            android:tint="@color/napcode_color"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+            app:layout_constraintHorizontal_bias="0.507"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/logoImageView"
+            app:srcCompat="@drawable/ic_logo_name_alpha_only_name"/>
+
+
+        <!--AUTHOR-->
+
+        <View
+            android:id="@+id/authorBeginLineView"
+            android:layout_width="@dimen/base_margin"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/authorLabelTextView"
+            app:layout_constraintStart_toEndOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="@+id/authorLabelTextView"/>
+
+        <TextView
+            android:id="@+id/authorLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:text="@string/author_title"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/authorBeginLineView"
+            app:layout_constraintTop_toBottomOf="@+id/nameImageView"/>
+
+        <View
+            android:id="@+id/authorLineView"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/authorLabelTextView"
+            app:layout_constraintLeft_toRightOf="@id/authorLabelTextView"
+            app:layout_constraintRight_toLeftOf="@id/guidelineRight"
+            app:layout_constraintTop_toTopOf="@+id/authorLabelTextView"/>
+
+        <TextView
+            android:id="@+id/authorTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:text="@string/author"
+            android:textSize="@dimen/base_text_size"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/authorLineView"
+            app:layout_constraintVertical_bias="0.041"/>
+
+        <ImageView
+            android:id="@+id/playStoreImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/mailImageView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/authorTextView"
+            app:srcCompat="@drawable/ic_play_store"/>
+
+        <ImageView
+            android:id="@+id/githubImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/mailImageView"
+            app:layout_constraintTop_toBottomOf="@+id/authorTextView"
+            app:srcCompat="@drawable/ic_github_logo"/>
+
+        <ImageView
+            android:id="@+id/mailImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/githubImageView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/playStoreImageView"
+            app:layout_constraintTop_toBottomOf="@+id/authorTextView"
+            app:srcCompat="@drawable/ic_email"/>
+
+
+        <View
+            android:id="@+id/iconsBeginLineView"
+            android:layout_width="@dimen/base_margin"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/iconsLabelTextView"
+            app:layout_constraintStart_toEndOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="@+id/iconsLabelTextView"/>
+
+        <TextView
+            android:id="@+id/iconsLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginTop="@dimen/base_margin"
+            android:text="@string/icons_title"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/iconsBeginLineView"
+            app:layout_constraintTop_toBottomOf="@+id/mailImageView"/>
+
+        <View
+            android:id="@+id/iconsLineView"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/iconsLabelTextView"
+            app:layout_constraintLeft_toRightOf="@id/iconsLabelTextView"
+            app:layout_constraintRight_toLeftOf="@id/guidelineRight"
+            app:layout_constraintTop_toTopOf="@+id/iconsLabelTextView"/>
+
+        <TextView
+            android:id="@+id/iconsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin"
+            android:textColorLink="@color/colorPrimary"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
+            app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+            app:layout_constraintTop_toBottomOf="@+id/iconsLabelTextView"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="16dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="16dp"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/guidelineLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2"/>
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
