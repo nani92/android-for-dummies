@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    android:id="@+id/scrollView"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true">
@@ -96,6 +96,7 @@
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
+            android:tint="@color/colorPrimaryDark"
             app:layout_constraintEnd_toStartOf="@+id/mailImageView"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="spread_inside"
@@ -109,6 +110,7 @@
             android:layout_height="48dp"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="8dp"
+            android:tint="@color/colorPrimaryDark"
             app:layout_constraintEnd_toStartOf="@+id/guidelineRight"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/mailImageView"
@@ -120,12 +122,12 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
+            android:tint="@color/colorPrimaryDark"
             app:layout_constraintEnd_toStartOf="@+id/githubImageView"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/playStoreImageView"
             app:layout_constraintTop_toBottomOf="@+id/authorTextView"
             app:srcCompat="@drawable/ic_email"/>
-
 
         <View
             android:id="@+id/iconsBeginLineView"
