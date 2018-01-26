@@ -38,7 +38,7 @@
     <!--Send image guide toasts-->
     <string name="clicked_on_more">Bravo! Clicking on this button would expand menu, where \"Share\" option may be present.</string>
     <string name="clicked_on_share">This is a button with \"Share\" icon.</string>
-    <string name="clicked_on_app_share">You can choose this or any other from presented apps.</string>
+    <string name="clicked_on_app_share">You can choose this or any other from listed apps.</string>
 
     <!--PL ^_^ -->
 

@@ -106,19 +106,25 @@ class AboutActivity : AppCompatActivity() {
 
     fun setupMail() {
         mailImageView.setOnClickListener({
-            var emailIntent = Intent(Intent.ACTION_SEND)
-            emailIntent.type = EMAIL_ACTION_TYPE
-            emailIntent.putExtra(Intent.EXTRA_EMAIL, NANI_EMAIL)
-            emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name))
 
             try {
-                startActivity(emailIntent)
+                trySendEmailWithSendTo()
             } catch (e: ActivityNotFoundException) {
                 Snackbar
                         .make(scrollView, getString(R.string.email_error), Snackbar.LENGTH_SHORT)
                         .show()
             }
         })
+    }
+
+    @Throws(ActivityNotFoundException::class)
+    fun trySendEmailWithSendTo(){
+        var emailIntent = Intent(Intent.ACTION_SEND)
+        emailIntent.type = EMAIL_ACTION_TYPE
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, NANI_EMAIL)
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name))
+
+        startActivity(emailIntent)
     }
 
     fun setupIcons() {
