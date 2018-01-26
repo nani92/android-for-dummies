@@ -1,4 +1,4 @@
-package eu.napcode.kidscalmer.about
+package eu.napcode.android_for_dummies.about
 
 var NAPCODE_URL = "http://napcode.eu"
 var NAPCODE_PLAY_STORE_URL = "https://play.google.com/store/apps/dev?id=8034018404241334903&hl=en"

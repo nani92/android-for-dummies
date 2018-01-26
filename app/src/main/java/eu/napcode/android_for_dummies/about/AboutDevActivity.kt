@@ -1,4 +1,4 @@
-package eu.napcode.kidscalmer.about
+package eu.napcode.android_for_dummies.about
 
 import android.content.ActivityNotFoundException
 import android.os.Bundle

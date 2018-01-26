@@ -24,11 +24,11 @@
         </activity>
 
         <activity
-            android:name="eu.napcode.kidscalmer.about.AboutDevActivity"
+            android:name=".about.AboutDevActivity"
             android:theme="@style/AppThemeNoBackground"/>
 
         <activity
-            android:name="eu.napcode.kidscalmer.about.AboutDevActivity"
+            android:name=".about.AboutActivity"
             android:theme="@style/AppThemeNoBackground"/>
 
         <activity
