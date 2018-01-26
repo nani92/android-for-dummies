@@ -44,6 +44,7 @@
 
     <!--About-->
     <string name="about">About</string>
+    <string name="about_dev">About Dev</string>
     <string name="author">%1$s%2$sNatalia Jastrzębska @NapCode</string>
     <string name="by">" by "</string>
     <string name="icons_title">Icon Credits</string>

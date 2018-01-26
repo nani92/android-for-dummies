@@ -6,4 +6,9 @@
         android:id="@+id/about"
         android:title="@string/about"
         app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/about_dev"
+        android:title="@string/about_dev"
+        app:showAsAction="never"/>
 </menu>

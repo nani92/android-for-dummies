@@ -15,8 +15,9 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import eu.napcode.android_for_dummies.about.AboutActivity
 import eu.napcode.android_for_dummies.base.HelpEntry
-import eu.napcode.kidscalmer.about.AboutActivity
+import eu.napcode.kidscalmer.about.AboutDevActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -57,8 +58,17 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
 
         if (item!!.itemId == R.id.about) {
+            val aboutIntent = Intent(this, AboutDevActivity::class.java)
+            startActivity(aboutIntent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+
+            return true
+        }
+
+        if (item!!.itemId == R.id.about_dev) {
             val aboutIntent = Intent(this, AboutActivity::class.java)
             startActivity(aboutIntent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+
+            return true
         }
 
         return super.onOptionsItemSelected(item)
