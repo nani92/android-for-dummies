@@ -1,7 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/scrollView"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:id="@+id/appIdeaBeginLine_view"
+            android:layout_width="@dimen/base_margin"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/appIdeaLabel_textView"
+            app:layout_constraintStart_toEndOf="@+id/left_guideline"
+            app:layout_constraintTop_toTopOf="@+id/appIdeaLabel_textView"/>
+
+        <TextView
+            android:id="@+id/appIdeaLabel_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:text="@string/app_idea_title"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/appIdeaBeginLine_view"
+            app:layout_constraintTop_toBottomOf="@+id/top_guideline"/>
+
+        <View
+            android:id="@+id/appIdeaLine_view"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/appIdeaLabel_textView"
+            app:layout_constraintLeft_toRightOf="@id/appIdeaLabel_textView"
+            app:layout_constraintRight_toLeftOf="@id/right_guideline"
+            app:layout_constraintTop_toTopOf="@+id/appIdeaLabel_textView"/>
+
+        <TextView
+            android:id="@+id/about_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/base_text_size"
+            app:layout_constraintLeft_toRightOf="@id/left_guideline"
+            app:layout_constraintRight_toLeftOf="@id/right_guideline"
+            app:layout_constraintTop_toBottomOf="@id/appIdeaLabel_textView"
+            app:layout_constraintVertical_bias="0.0"/>
+
+        <Button
+            android:id="@+id/sendMail_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin"
+            android:drawableLeft="@drawable/ic_email"
+            android:drawablePadding="@dimen/base_margin"
+            android:drawableTint="@android:color/white"
+            android:gravity="center_vertical|left"
+            android:text="@string/send_me_email"
+            android:theme="@style/ButtonStyle"
+            app:layout_constraintLeft_toRightOf="@id/left_guideline"
+            app:layout_constraintRight_toLeftOf="@id/right_guideline"
+            app:layout_constraintTop_toBottomOf="@id/about_textView"/>
+
+        <View
+            android:id="@+id/moreBeginLine_view"
+            android:layout_width="@dimen/base_margin"
+            android:layout_height="2dp"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/moreLabel_textView"
+            app:layout_constraintStart_toEndOf="@+id/left_guideline"
+            app:layout_constraintTop_toTopOf="@+id/moreLabel_textView"/>
+
+        <TextView
+            android:id="@+id/moreLabel_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:layout_marginTop="@dimen/base_margin"
+            android:text="@string/more"
+            android:textColor="@color/colorPrimaryDark"
+            app:layout_constraintEnd_toStartOf="@+id/right_guideline"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@id/moreBeginLine_view"
+            app:layout_constraintTop_toBottomOf="@+id/sendMail_button"/>
+
+        <View
+            android:id="@+id/moreLine_view"
+            android:layout_width="0dp"
+            android:layout_height="2dp"
+            android:layout_marginLeft="@dimen/small_margin"
+            android:background="@color/colorPrimaryDark"
+            app:layout_constraintBottom_toBottomOf="@+id/moreLabel_textView"
+            app:layout_constraintLeft_toRightOf="@id/moreLabel_textView"
+            app:layout_constraintRight_toLeftOf="@id/right_guideline"
+            app:layout_constraintTop_toTopOf="@+id/moreLabel_textView"/>
+
+        <TextView
+            android:id="@+id/more_textView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/base_text_size"
+            android:text="@string/about_app_more"
+            app:layout_constraintLeft_toRightOf="@id/left_guideline"
+            app:layout_constraintRight_toLeftOf="@id/right_guideline"
+            app:layout_constraintTop_toBottomOf="@id/moreLabel_textView"
+            app:layout_constraintVertical_bias="0.0"/>
+
+        <Button
+            android:id="@+id/github_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/base_margin"
+            android:drawableLeft="@drawable/ic_github_logo"
+            android:drawablePadding="@dimen/base_margin"
+            android:drawableTint="@android:color/white"
+            android:gravity="center_vertical|left"
+            android:text="@string/go_to_source_code"
+            android:theme="@style/ButtonStyle"
+            app:layout_constraintLeft_toRightOf="@id/left_guideline"
+            app:layout_constraintRight_toLeftOf="@id/right_guideline"
+            app:layout_constraintTop_toBottomOf="@id/more_textView"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/left_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/base_margin"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/right_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/base_margin"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/top_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="@dimen/base_margin"/>
+
+        <android.support.constraint.Guideline
+            android:id="@+id/bottom_guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_end="@dimen/base_margin"/>
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>

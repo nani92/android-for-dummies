@@ -1,6 +1,7 @@
 package eu.napcode.android_for_dummies.about
 
 import android.content.ActivityNotFoundException
+import android.content.Context
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -21,8 +22,6 @@ import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.ANIMATION_STANDARD_DURATION
 
 class AboutDevActivity : AppCompatActivity() {
-
-    var EMAIL_ACTION_TYPE = "text/plain"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -119,12 +118,7 @@ class AboutDevActivity : AppCompatActivity() {
 
     @Throws(ActivityNotFoundException::class)
     fun trySendEmailWithSendTo(){
-        var emailIntent = Intent(Intent.ACTION_SEND)
-        emailIntent.type = EMAIL_ACTION_TYPE
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, NANI_EMAIL)
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.app_name))
-
-        startActivity(emailIntent)
+        startActivity(getEmailIntent(this))
     }
 
     fun setupIcons() {
@@ -156,4 +150,15 @@ class AboutDevActivity : AppCompatActivity() {
 
         return stringBuilder.toString()
     }
+}
+
+var EMAIL_ACTION_TYPE = "text/plain"
+
+fun getEmailIntent(context: Context) : Intent {
+    var emailIntent = Intent(Intent.ACTION_SEND)
+    emailIntent.type = EMAIL_ACTION_TYPE
+    emailIntent.putExtra(Intent.EXTRA_EMAIL, NANI_EMAIL)
+    emailIntent.putExtra(Intent.EXTRA_SUBJECT, context.getString(R.string.app_name))
+
+    return emailIntent
 }

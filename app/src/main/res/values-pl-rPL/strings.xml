@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">E-córka</string>
+    <string name="app_name">E-córcia</string>
 
     <!--Send image-->
     <string name="send_image_help_entry_name">Prześlij zdjęcie</string>
@@ -34,7 +34,6 @@
     <string name="share_photos">Prześlij do Zdjęć</string>
     <string name="share_gmail">Gmail</string>
     <string name="share_slack">Slack</string>
-
 
     <!--Send image guide toasts-->
     <string name="clicked_on_more">Brawo! Po naciśnięciu tego przycisku powinno rozwinąć się menu, w którym opcja \"Udostępnij\" może być dostępna.</string>
