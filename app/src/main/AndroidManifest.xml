@@ -45,6 +45,10 @@
 
         <activity android:name=".sendImage.help.HelpSendImageActivity"/>
 
+        <activity
+            android:name=".orientation.OrientationMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
     </application>
 
 </manifest>

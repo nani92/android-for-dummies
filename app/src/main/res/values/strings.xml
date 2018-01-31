@@ -42,6 +42,9 @@
 
     <!--PL ^_^ -->
 
+    <!--Orientation-->
+    <string name="orientation_help_entry_name">Orientation</string>
+
     <!--About-->
     <string name="about">About</string>
     <string name="about_dev">About Dev</string>

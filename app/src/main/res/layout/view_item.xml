@@ -24,7 +24,7 @@
             app:layout_constraintStart_toStartOf="@id/left_guideline"
             app:layout_constraintTop_toBottomOf="@id/top_guideline"
             app:layout_constraintVertical_bias="0.0"
-            app:srcCompat="@drawable/ic_send_image"/>
+            app:srcCompat="@drawable/he_send_image"/>
 
         <TextView
             android:id="@+id/help_name_text_view"
