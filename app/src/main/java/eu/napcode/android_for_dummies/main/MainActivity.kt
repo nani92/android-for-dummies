@@ -1,6 +1,7 @@
 package eu.napcode.android_for_dummies.main
 
 import android.app.ActivityOptions
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v7.app.AppCompatDelegate
@@ -10,8 +11,12 @@ import eu.napcode.android_for_dummies.base.getHelpEntries
 import kotlinx.android.synthetic.main.activity_main.*
 import android.support.v7.widget.AppCompatImageView
 import android.util.Pair
+import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.TextView
+import eu.napcode.android_for_dummies.about.AboutActivity
+import eu.napcode.android_for_dummies.about.AboutDevActivity
 import eu.napcode.android_for_dummies.base.HelpEntry
 
 class MainActivity : AppCompatActivity() {
@@ -42,5 +47,30 @@ class MainActivity : AppCompatActivity() {
         layoutManager.orientation = LinearLayoutManager.VERTICAL
 
         return layoutManager
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main_menu, menu)
+
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+
+        if (item!!.itemId == R.id.about_dev) {
+            val aboutIntent = Intent(this, AboutDevActivity::class.java)
+            startActivity(aboutIntent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+
+            return true
+        }
+
+        if (item!!.itemId == R.id.about) {
+            val aboutIntent = Intent(this, AboutActivity::class.java)
+            startActivity(aboutIntent, ActivityOptions.makeSceneTransitionAnimation(this).toBundle())
+
+            return true
+        }
+
+        return super.onOptionsItemSelected(item)
     }
 }

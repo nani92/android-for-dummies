@@ -11,4 +11,6 @@
 
     <color name="customToastBackgroundColor">#EEF57C00</color>
     <color name="customToastTextColor">#FFE0B2</color>
+    
+    <color name="napcode_color">#1faaff</color>
 </resources>

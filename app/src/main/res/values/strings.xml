@@ -38,10 +38,27 @@
     <!--Send image guide toasts-->
     <string name="clicked_on_more">Bravo! Clicking on this button would expand menu, where \"Share\" option may be present.</string>
     <string name="clicked_on_share">This is a button with \"Share\" icon.</string>
-    <string name="clicked_on_app_share">You can choose this or any other from presented apps.</string>
+    <string name="clicked_on_app_share">You can choose this or any other from listed apps.</string>
 
     <!--PL ^_^ -->
 
+    <!--About-->
+    <string name="about">About</string>
+    <string name="about_dev">About Dev</string>
+    <string name="author">%1$s%2$sNatalia Jastrzębska @NapCode</string>
+    <string name="by">" by "</string>
+    <string name="icons_title">Icon Credits</string>
+    <string name="author_title">Author</string>
+    <string name="email_error">Could not find email app.</string>
+    <string name="app_idea_title">App idea</string>
+    <string name="about_app">This app is created for my mom, that kept asking me for help with sending image via her favourite app.</string>
+    <string name="about_app_2">To be honest no one has to know right away what icon \"Share\" looks like.</string>
+    <string name="about_app_3">Aim of this application is to teach user how to do certain actions and help them understand android.</string>
+    <string name="about_app_4">If you have any suggestion about this app, let me know.</string>
+    <string name="send_me_email">Send me email</string>
+    <string name="more">More</string>
+    <string name="about_app_more">This app is an open source project. Go ahead an take a look at source code.</string>
+    <string name="go_to_source_code">Go to source code</string>
 
     <!--TRANSITIONS-->
     <string name="help_entry_image_view_transition_name" translatable="false">guide icon image view</string>
