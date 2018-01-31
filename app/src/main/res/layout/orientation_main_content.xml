@@ -1,0 +1,89 @@
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/info_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/orientation_instruction"
+        android:textSize="@dimen/big_text_size"
+        app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/top_guideline"
+        app:layout_constraintVertical_bias="0"/>
+
+    <Button
+        android:id="@+id/showOrientationWithSettings_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:gravity="left|center_vertical"
+        android:text="@string/show_orientation_with_settings"
+        android:theme="@style/ButtonStyle.Show"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/info_textView"/>
+
+    <Button
+        android:id="@+id/showOrientationWithStatusBar_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:gravity="left|center_vertical"
+        android:text="@string/show_orientation_with_status_bar"
+        android:theme="@style/ButtonStyle.Show"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/showOrientationWithSettings_button"/>
+
+    <Button
+        android:id="@+id/helpMeSendImage_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/base_margin"
+        android:gravity="left|center_vertical"
+        android:text="@string/help_me_send_image"
+        android:theme="@style/ButtonStyle.Help"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/showOrientationWithStatusBar_button"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/base_margin"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/base_margin"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/base_margin"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/base_margin"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/shareImage_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2"/>
+</android.support.constraint.ConstraintLayout>
