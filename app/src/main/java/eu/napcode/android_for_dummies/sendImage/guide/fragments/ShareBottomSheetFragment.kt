@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.*
-import eu.napcode.android_for_dummies.sendImage.guide.SendImageGuideActivity
+import eu.napcode.android_for_dummies.sendImage.guide.OrientationGuideActivity
 import kotlinx.android.synthetic.main.bottom_sheet_share_constraint_layout.*
 import kotlinx.android.synthetic.main.fragment_share_bottom_sheet.*
 
@@ -19,7 +19,7 @@ class ShareBottomSheetFragment : BaseFragmentStep() {
     }
 
     override fun onSelected() {
-        (activity as SendImageGuideActivity).displayedAllGuide = true
+        (activity as OrientationGuideActivity).displayedAllGuide = true
 
         showView()
     }

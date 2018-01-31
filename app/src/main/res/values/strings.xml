@@ -50,6 +50,7 @@
     </string>
     <string name="show_orientation_with_settings">Show me how to change orientation with settings</string>
     <string name="show_orientation_with_status_bar">Show me how to change orientation with status bar</string>
+    <string name="orientation_tip_find_settings_app">Go to your apps and look for app called Settings.</string>
 
     <!--About-->
     <string name="about">About</string>

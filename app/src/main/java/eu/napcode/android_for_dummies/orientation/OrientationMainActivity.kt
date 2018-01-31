@@ -8,9 +8,9 @@ import android.transition.Fade
 import android.view.Window
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.ANIMATION_STANDARD_DURATION
-import eu.napcode.android_for_dummies.sendImage.guide.SendImageGuideActivity
+import eu.napcode.android_for_dummies.sendImage.guide.OrientationGuideActivity
 import eu.napcode.android_for_dummies.sendImage.help.HelpSendImageActivity
-import kotlinx.android.synthetic.main.send_image_main_content.*
+import kotlinx.android.synthetic.main.orientation_main_content.*
 import kotlinx.android.synthetic.main.help_entry_main_toolbar.*
 
 class OrientationMainActivity : AppCompatActivity() {
@@ -22,8 +22,8 @@ class OrientationMainActivity : AppCompatActivity() {
 
         window.enterTransition = Fade().setDuration(ANIMATION_STANDARD_DURATION)
 
-        showHowToSendImage_button.setOnClickListener { startActivity(Intent(this, SendImageGuideActivity::class.java), ActivityOptions.makeSceneTransitionAnimation(this).toBundle()) }
-        helpMeSendImage_button.setOnClickListener { startActivity(Intent(this, HelpSendImageActivity::class.java), ActivityOptions.makeSceneTransitionAnimation(this).toBundle()) }
+        showOrientationWithSettings_button.setOnClickListener { startActivity(Intent(this, OrientationGuideActivity::class.java), ActivityOptions.makeSceneTransitionAnimation(this).toBundle()) }
+        //helpMeSendImage_button.setOnClickListener { startActivity(Intent(this, HelpSendImageActivity::class.java), ActivityOptions.makeSceneTransitionAnimation(this).toBundle()) }
 
         setupToolbar()
     }

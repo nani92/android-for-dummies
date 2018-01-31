@@ -25,7 +25,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <include
-            layout="@layout/send_image_main_content"/>
+            layout="@layout/orientation_main_content"/>
 
     </android.support.v4.widget.NestedScrollView>
 </android.support.design.widget.CoordinatorLayout>

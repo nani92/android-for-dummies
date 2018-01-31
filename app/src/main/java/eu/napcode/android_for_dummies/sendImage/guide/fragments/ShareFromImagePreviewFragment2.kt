@@ -7,6 +7,7 @@ import android.support.design.internal.BottomNavigationMenuView
 import android.view.*
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.*
+import eu.napcode.android_for_dummies.sendImage.guide.OrientationGuideActivity
 import eu.napcode.android_for_dummies.sendImage.guide.SendImageGuideActivity
 import kotlinx.android.synthetic.main.fragment_share_from_image_preview2.*
 

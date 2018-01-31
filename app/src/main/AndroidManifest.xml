@@ -49,6 +49,8 @@
             android:name=".orientation.OrientationMainActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
+        <activity android:name=".sendImage.guide.OrientationGuideActivity"/>
+
     </application>
 
 </manifest>
