@@ -55,7 +55,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/ic_bluetooth"/>
+        app:srcCompat="@drawable/send_image_app_bluetooth"/>
 
     <TextView
         android:id="@+id/firstCell_textView"
@@ -87,7 +87,7 @@
         app:layout_constraintStart_toStartOf="@id/firstVert_guideline"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/ic_google_drive"/>
+        app:srcCompat="@drawable/send_image_app_google_drive"/>
 
     <TextView
         android:id="@+id/secondCell_textView"
@@ -119,7 +119,7 @@
         app:layout_constraintStart_toEndOf="@id/secondVert_guideline"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/ic_google_maps"/>
+        app:srcCompat="@drawable/send_image_app_google_maps"/>
 
     <TextView
         android:id="@+id/thirdCell_textView"
@@ -155,7 +155,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/firstHor_guideline"
         app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/ic_messages"/>
+        app:srcCompat="@drawable/send_image_app_messages"/>
 
     <TextView
         android:id="@+id/fourthCell_textView"
@@ -187,7 +187,7 @@
         app:layout_constraintStart_toStartOf="@id/firstVert_guideline"
         app:layout_constraintTop_toBottomOf="@id/firstHor_guideline"
         app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/ic_google_photos"/>
+        app:srcCompat="@drawable/sned_image_app_google_photos"/>
 
     <TextView
         android:id="@+id/fifthCell_textView"
@@ -219,7 +219,7 @@
         app:layout_constraintStart_toEndOf="@id/secondVert_guideline"
         app:layout_constraintTop_toBottomOf="@id/firstHor_guideline"
         app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/ic_gmail"/>
+        app:srcCompat="@drawable/send_image_app_gmail"/>
 
     <TextView
         android:id="@+id/sixthCell_textView"
@@ -253,7 +253,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/secondHor_guideline"
         app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/ic_slack"/>
+        app:srcCompat="@drawable/send_image_app_slack"/>
 
     <TextView
         android:id="@+id/seventhCell_textView"

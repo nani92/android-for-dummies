@@ -42,12 +42,12 @@
     </style>
 
     <style name="ButtonStyle.Show">
-        <item name="android:drawableLeft">@drawable/ic_show</item>
+        <item name="android:drawableLeft">@drawable/base_show</item>
         <item name="android:drawablePadding">@dimen/small_margin</item>
     </style>
 
     <style name="ButtonStyle.Help">
-        <item name="android:drawableLeft">@drawable/ic_help</item>
+        <item name="android:drawableLeft">@drawable/base_help</item>
         <item name="android:drawablePadding">@dimen/small_margin</item>
     </style>
 
