@@ -1,8 +1,6 @@
 <resources>
 
-    <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -10,14 +8,12 @@
     </style>
 
     <style name="AppThemeNoBackground" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
@@ -49,6 +45,15 @@
     <style name="ButtonStyle.Help">
         <item name="android:drawableLeft">@drawable/base_help</item>
         <item name="android:drawablePadding">@dimen/small_margin</item>
+    </style>
+
+    <style name="SettingTextViewStyle">
+        <item name="android:drawablePadding">@dimen/settings_drawable_padding</item>
+        <item name="android:textSize">@dimen/base_text_size</item>
+        <item name="android:paddingTop">@dimen/base_margin</item>
+        <item name="android:paddingBottom">@dimen/base_margin</item>
+        <item name="android:layout_marginBottom">@dimen/base_margin</item>
+        <item name="android:layout_marginTop">@dimen/base_margin</item>
     </style>
 
 </resources>

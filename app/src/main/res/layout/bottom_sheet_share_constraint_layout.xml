@@ -187,7 +187,7 @@
         app:layout_constraintStart_toStartOf="@id/firstVert_guideline"
         app:layout_constraintTop_toBottomOf="@id/firstHor_guideline"
         app:layout_constraintVertical_chainStyle="packed"
-        app:srcCompat="@drawable/sned_image_app_google_photos"/>
+        app:srcCompat="@drawable/send_image_app_google_photos"/>
 
     <TextView
         android:id="@+id/fifthCell_textView"

@@ -1,4 +1,4 @@
-package eu.napcode.android_for_dummies.sendImage.guide
+package eu.napcode.android_for_dummies.orientation.guide
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -10,7 +10,7 @@ import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.ANIMATION_SHORT_DURATION
 import eu.napcode.android_for_dummies.base.OnProceedListener
-import kotlinx.android.synthetic.main.activity_send_image_guide.*
+import kotlinx.android.synthetic.main.activity_orientation_guide.*
 
 class OrientationGuideActivity : AppCompatActivity(), OnProceedListener, StepperLayout.StepperListener {
 
@@ -20,6 +20,7 @@ class OrientationGuideActivity : AppCompatActivity(), OnProceedListener, Stepper
         super.onCreate(savedInstanceState)
         window.requestFeature(Window.FEATURE_ACTIVITY_TRANSITIONS)
         setContentView(R.layout.activity_orientation_guide)
+        setSupportActionBar(toolbar)
 
         window.enterTransition = Explode().setDuration(ANIMATION_SHORT_DURATION)
 

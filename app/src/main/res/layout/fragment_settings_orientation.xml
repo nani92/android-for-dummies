@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <TextView
+        android:id="@+id/more_textView"
+        style="@style/SettingTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:drawableStart="@drawable/settings_more"
+        android:text="@string/more"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/top_guideline"/>
+
+    <View
+        android:id="@+id/divider_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/base_margin"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/more_textView"/>
+
+    <TextView
+        android:id="@+id/label_textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small_margin"
+        android:text="@string/setting_device"
+        android:textColor="@color/gray"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintTop_toBottomOf="@id/divider_view"/>
+
+    <TextView
+        android:id="@+id/display_textView"
+        style="@style/SettingTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/settings_display"
+        android:text="@string/setting_display"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/label_textView"/>
+
+    <TextView
+        android:id="@+id/notification_textView"
+        style="@style/SettingTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/settings_notification"
+        android:text="@string/setting_notifications"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/display_textView"/>
+
+    <TextView
+        android:id="@+id/sound_textView"
+        style="@style/SettingTextViewStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/settings_sound"
+        android:text="@string/setting_sound"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@+id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/notification_textView"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/left_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/base_margin"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/right_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/base_margin"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="@dimen/base_margin"/>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/bottom_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="@dimen/base_margin"/>
+
+</android.support.constraint.ConstraintLayout>

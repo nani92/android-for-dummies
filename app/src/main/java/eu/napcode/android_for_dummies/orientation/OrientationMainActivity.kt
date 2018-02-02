@@ -8,8 +8,7 @@ import android.transition.Fade
 import android.view.Window
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.ANIMATION_STANDARD_DURATION
-import eu.napcode.android_for_dummies.sendImage.guide.OrientationGuideActivity
-import eu.napcode.android_for_dummies.sendImage.help.HelpSendImageActivity
+import eu.napcode.android_for_dummies.orientation.guide.OrientationGuideActivity
 import kotlinx.android.synthetic.main.orientation_main_content.*
 import kotlinx.android.synthetic.main.help_entry_main_toolbar.*
 
