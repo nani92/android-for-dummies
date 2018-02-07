@@ -1,11 +1,10 @@
 package eu.napcode.android_for_dummies.orientation.guideSettings.fragments
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.*
+import eu.napcode.android_for_dummies.overlay.utils.OverlayViewHelper
 import kotlinx.android.synthetic.main.fragment_settings.*
 
 class SettingsFragment : BaseFragmentStep() {
@@ -17,14 +16,10 @@ class SettingsFragment : BaseFragmentStep() {
     override fun onSelected() {
         super.onSelected()
 
-        showOverlayView()
+        showOverlayView(display_textView)
     }
-    private fun showOverlayView() {
-        var overlayHelper = OverlayViewHelper(context!!,
-                display_textView.left,
-                display_textView.top,
-                display_textView.right,
-                display_textView.bottom)
+    private fun showOverlayView(view: View) {
+        var overlayHelper = OverlayViewHelper(context!!, view)
         overlayHelper.message = getString(R.string.orientation_tip_find_display)
 
         startActivityForResult(overlayHelper.getOverlayIntent(), OVERLAY_ACTIVITY_REQUEST_CODE)

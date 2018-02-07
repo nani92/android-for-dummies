@@ -17,6 +17,7 @@ class OpenSettingsFragment : BaseFragmentStep() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        view.setOnClickListener({onProceedListener.onProceed()})
         populateSettingsView()
     }
 
@@ -24,7 +25,5 @@ class OpenSettingsFragment : BaseFragmentStep() {
         val settingsAppInfo = context!!.packageManager.getApplicationInfo("com.android.settings", 0)
         settings_imageView.setImageDrawable(context!!.packageManager.getApplicationIcon(settingsAppInfo))
         settingLabel_textView.text = context!!.packageManager.getApplicationLabel(settingsAppInfo)
-
-        settings_imageView.setOnClickListener({onProceedListener.onProceed()})
     }
 }

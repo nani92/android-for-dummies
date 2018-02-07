@@ -40,7 +40,7 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
-            android:name=".base.OverlayActivity"
+            android:name=".overlay.OverlayActivity"
             android:theme="@style/Theme.AppCompat.Translucent"/>
 
         <activity android:name=".sendImage.help.HelpSendImageActivity"/>

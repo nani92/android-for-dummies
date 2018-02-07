@@ -1,4 +1,4 @@
-package eu.napcode.android_for_dummies.base
+package eu.napcode.android_for_dummies.overlay
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -14,6 +14,9 @@ import android.util.DisplayMetrics
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import android.widget.TextView
+import eu.napcode.android_for_dummies.base.ANIMATION_SHORT_DELAY
+import eu.napcode.android_for_dummies.base.ANIMATION_SHORT_DURATION
+import eu.napcode.android_for_dummies.base.ANIMATION_STANDARD_DURATION
 
 public var DISPLAY_TEXT_TOP = 0
 public var DISPLAY_TEXT_BOTTOM = 1

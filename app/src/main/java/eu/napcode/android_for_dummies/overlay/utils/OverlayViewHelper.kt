@@ -1,9 +1,11 @@
-package eu.napcode.android_for_dummies.base
+package eu.napcode.android_for_dummies.overlay.utils
 
 import android.content.Context
 import android.content.Intent
+import android.view.View
+import eu.napcode.android_for_dummies.overlay.*
 
-class OverlayViewHelper {
+open class OverlayViewHelper {
 
     var context: Context
     var message: String = ""
@@ -18,14 +20,22 @@ class OverlayViewHelper {
     }
 
     constructor(context: Context, left: Int, top: Int, right: Int, bottom: Int) {
-        this.context =context
+        this.context = context
         this.left = left
         this.top = top
         this.right = right
         this.bottom = bottom
     }
 
-    fun getOverlayIntent() : Intent {
+    constructor(context: Context, view: View) {
+        this.context = context
+        this.left = view.left
+        this.top = view.top
+        this.right = view.right
+        this.bottom = view.bottom
+    }
+
+    open fun getOverlayIntent(): Intent {
         var intent = Intent(context, OverlayActivity::class.java)
         intent.putExtra(SHOW_VIEW_ELEMENT_LEFT_KEY, left)
         intent.putExtra(SHOW_VIEW_ELEMENT_TOP_KEY, top)

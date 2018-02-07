@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.view.*
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.*
+import eu.napcode.android_for_dummies.overlay.utils.OverlayViewHelper
 import eu.napcode.android_for_dummies.sendImage.guide.SendImageGuideActivity
 
 var OVERLAY_ACTIVITY_REQUEST_CODE_SHARE = 101

@@ -54,6 +54,7 @@
     <string name="orientation_tip_find_settings_app">Go to your apps and look for app called Settings.</string>
     <string name="orientation_tip_find_display">Find setting called display and click on it.</string>
     <string name="orientation_tip_find_device_rotation">Find setting called Device Rotation and click on it.</string>
+    <string name="orientation_tip_choose_option">Now you can choose one of two available options.</string>
 
     <string name="settings">Settings</string>
     <string name="setting_more">More</string>
@@ -65,6 +66,9 @@
     <string name="setting_wallper">Wallper</string>
     <string name="setting_device_rotation">Device rotation</string>
     <string name="setting_font_size">Font size</string>
+
+    <string name="orientation_option_rotate">Rotate the contents of the screen</string>
+    <string name="orientation_option_portrait">Stay in portrait view</string>
 
     <!--About-->
     <string name="about">About</string>
