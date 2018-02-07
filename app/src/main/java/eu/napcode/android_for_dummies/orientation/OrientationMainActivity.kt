@@ -8,6 +8,7 @@ import android.transition.Fade
 import android.view.Window
 import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.ANIMATION_STANDARD_DURATION
+import eu.napcode.android_for_dummies.notimplemented.NotImplementedActivity
 import eu.napcode.android_for_dummies.orientation.guide.OrientationGuideActivity
 import kotlinx.android.synthetic.main.orientation_main_content.*
 import kotlinx.android.synthetic.main.help_entry_main_toolbar.*
@@ -21,8 +22,15 @@ class OrientationMainActivity : AppCompatActivity() {
 
         window.enterTransition = Fade().setDuration(ANIMATION_STANDARD_DURATION)
 
-        showOrientationWithSettings_button.setOnClickListener { startActivity(Intent(this, OrientationGuideActivity::class.java), ActivityOptions.makeSceneTransitionAnimation(this).toBundle()) }
-        //helpMeSendImage_button.setOnClickListener { startActivity(Intent(this, HelpSendImageActivity::class.java), ActivityOptions.makeSceneTransitionAnimation(this).toBundle()) }
+        val transitionBundle = ActivityOptions.makeSceneTransitionAnimation(this).toBundle()
+
+        showOrientationWithSettings_button.setOnClickListener {
+            startActivity(Intent(this, OrientationGuideActivity::class.java), transitionBundle)
+        }
+
+        showOrientationWithStatusBar_button.setOnClickListener {
+            startActivity(Intent(this, NotImplementedActivity::class.java), transitionBundle)
+        }
 
         setupToolbar()
     }
