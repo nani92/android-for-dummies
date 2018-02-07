@@ -53,6 +53,8 @@
             android:name=".orientation.guide.OrientationGuideActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
 
+        <activity android:name=".notimplemented.NotImplementedActivity"/>
+
     </application>
 
 </manifest>

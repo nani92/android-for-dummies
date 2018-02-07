@@ -70,6 +70,9 @@
     <string name="orientation_option_rotate">Rotate the contents of the screen</string>
     <string name="orientation_option_portrait">Stay in portrait view</string>
 
+    <!--Not implemented-->
+    <string name="not_implemented">We working on that right now.</string>
+
     <!--About-->
     <string name="about">About</string>
     <string name="about_dev">About Dev</string>
