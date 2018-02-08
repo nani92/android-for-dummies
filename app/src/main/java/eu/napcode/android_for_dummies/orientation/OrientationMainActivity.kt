@@ -10,6 +10,7 @@ import eu.napcode.android_for_dummies.R
 import eu.napcode.android_for_dummies.base.ANIMATION_STANDARD_DURATION
 import eu.napcode.android_for_dummies.notimplemented.NotImplementedActivity
 import eu.napcode.android_for_dummies.orientation.guide.OrientationGuideActivity
+import eu.napcode.android_for_dummies.orientation.help.OrientationHelpActivity
 import kotlinx.android.synthetic.main.orientation_main_content.*
 import kotlinx.android.synthetic.main.help_entry_main_toolbar.*
 
@@ -30,6 +31,10 @@ class OrientationMainActivity : AppCompatActivity() {
 
         showOrientationWithStatusBar_button.setOnClickListener {
             startActivity(Intent(this, NotImplementedActivity::class.java), transitionBundle)
+        }
+
+        helpMeChangeOrientation_button.setOnClickListener {
+            startActivity(Intent(this, OrientationHelpActivity::class.java), transitionBundle)
         }
 
         setupToolbar()

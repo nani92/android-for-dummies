@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 
     <application
         android:allowBackup="true"
@@ -54,6 +55,8 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".notimplemented.NotImplementedActivity"/>
+
+        <activity android:name=".orientation.help.OrientationHelpActivity"/>
 
     </application>
 
