@@ -24,7 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_margin"
         android:textAlignment="center"
+        android:textColor="@color/colorPrimaryDark"
         android:textSize="@dimen/big_text_size"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@id/changeOrientation_button"
         app:layout_constraintLeft_toRightOf="@id/left_guideline"
         app:layout_constraintRight_toLeftOf="@id/right_guideline"
@@ -35,13 +37,39 @@
         android:id="@+id/changeOrientation_button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/base_margin"
         android:layout_marginTop="@dimen/base_margin"
         android:text="@string/change"
         android:theme="@style/ButtonStyle"
-        app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
+        app:layout_constraintBottom_toTopOf="@id/noSaveSettingsGrantedPermissions_textView"
         app:layout_constraintLeft_toRightOf="@id/left_guideline"
         app:layout_constraintRight_toLeftOf="@id/right_guideline"
         app:layout_constraintTop_toBottomOf="@id/orientationCurrentStateValue_textView"/>
+
+    <TextView
+        android:id="@+id/noSaveSettingsGrantedPermissions_textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/no_save_settings_permission"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/giveSaveSettingsPermissions_button"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/changeOrientation_button"/>
+
+    <Button
+        android:id="@+id/giveSaveSettingsPermissions_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/base_margin"
+        android:layout_marginTop="@dimen/base_margin"
+        android:text="@string/give_permissions"
+        android:theme="@style/ButtonStyle"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@id/bottom_guideline"
+        app:layout_constraintLeft_toRightOf="@id/left_guideline"
+        app:layout_constraintRight_toLeftOf="@id/right_guideline"
+        app:layout_constraintTop_toBottomOf="@id/noSaveSettingsGrantedPermissions_textView"/>
 
     <android.support.constraint.Guideline
         android:id="@+id/left_guideline"

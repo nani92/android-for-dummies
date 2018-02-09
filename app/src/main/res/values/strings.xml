@@ -73,6 +73,8 @@
 
     <string name="orientation_help_current_state">When device is rotated</string>
     <string name="change">change</string>
+    <string name="no_save_settings_permission">Upss... looks like you did not gave this app permissions to write settings.</string>
+    <string name="give_permissions">Give permissions</string>
 
     <!--Not implemented-->
     <string name="not_implemented">We working on that right now.</string>
