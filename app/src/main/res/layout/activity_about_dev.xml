@@ -24,7 +24,7 @@
             app:layout_constraintRight_toRightOf="@id/guidelineRight"
             app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
             app:layout_constraintTop_toTopOf="@+id/guidelineTop"
-            app:srcCompat="@drawable/ic_logo"/>
+            app:srcCompat="@drawable/about_napcode_logo"/>
 
         <ImageView
             android:id="@+id/nameImageView"
@@ -37,7 +37,7 @@
             app:layout_constraintHorizontal_bias="0.507"
             app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
             app:layout_constraintTop_toBottomOf="@+id/logoImageView"
-            app:srcCompat="@drawable/ic_logo_name_alpha_only_name"/>
+            app:srcCompat="@drawable/about_napcode_name"/>
 
 
         <!--AUTHOR-->
@@ -102,7 +102,7 @@
             app:layout_constraintHorizontal_chainStyle="spread_inside"
             app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
             app:layout_constraintTop_toBottomOf="@+id/authorTextView"
-            app:srcCompat="@drawable/ic_play_store"/>
+            app:srcCompat="@drawable/about_play_store"/>
 
         <ImageView
             android:id="@+id/githubImageView"
@@ -115,7 +115,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/mailImageView"
             app:layout_constraintTop_toBottomOf="@+id/authorTextView"
-            app:srcCompat="@drawable/ic_github_logo"/>
+            app:srcCompat="@drawable/about_github"/>
 
         <ImageView
             android:id="@+id/mailImageView"
@@ -127,7 +127,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/playStoreImageView"
             app:layout_constraintTop_toBottomOf="@+id/authorTextView"
-            app:srcCompat="@drawable/ic_email"/>
+            app:srcCompat="@drawable/about_email"/>
 
         <View
             android:id="@+id/iconsBeginLineView"

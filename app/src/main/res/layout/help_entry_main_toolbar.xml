@@ -20,7 +20,7 @@
         android:layout_marginTop="@dimen/base_margin"
         android:adjustViewBounds="true"
         android:transitionName="@string/help_entry_image_view_transition_name"
-        app:srcCompat="@drawable/ic_send_image"/>
+        app:srcCompat="@drawable/he_send_image"/>
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -39,8 +39,6 @@
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
             android:textSize="@dimen/big_text_size"
-            android:gravity="center"
-            android:textAlignment="center"
             android:transitionName="@string/help_entry_title_text_view_transition_name"/>
     </android.support.v7.widget.Toolbar>
 

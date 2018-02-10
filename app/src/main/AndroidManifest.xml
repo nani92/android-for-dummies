@@ -5,6 +5,7 @@
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 
     <application
         android:allowBackup="true"
@@ -40,10 +41,22 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
-            android:name=".base.OverlayActivity"
+            android:name=".overlay.OverlayActivity"
             android:theme="@style/Theme.AppCompat.Translucent"/>
 
         <activity android:name=".sendImage.help.HelpSendImageActivity"/>
+
+        <activity
+            android:name=".orientation.OrientationMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name=".orientation.guide.OrientationGuideActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity android:name=".notimplemented.NotImplementedActivity"/>
+
+        <activity android:name=".orientation.help.OrientationHelpActivity"/>
 
     </application>
 

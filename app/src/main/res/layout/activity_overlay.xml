@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <eu.napcode.android_for_dummies.base.OverlayWithHoleImageView
+    <eu.napcode.android_for_dummies.overlay.OverlayWithHoleImageView
         android:id="@+id/overlay_imageView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

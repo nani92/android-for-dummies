@@ -8,7 +8,6 @@ import android.view.Menu
 import android.view.View
 import android.view.Window
 import android.widget.ImageView
-import android.widget.Toast
 import com.stepstone.stepper.StepperLayout
 import com.stepstone.stepper.VerificationError
 import eu.napcode.android_for_dummies.R

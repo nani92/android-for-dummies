@@ -1,4 +1,4 @@
-package eu.napcode.android_for_dummies.base
+package eu.napcode.android_for_dummies.overlay
 
 import android.content.Context
 import android.graphics.*
