@@ -25,4 +25,8 @@ helping to acieve the goal.
 ## Design
 As this app is for users that have problems with using android, design should be clean, simple and readable. I decided to
 use relatively big buttons that are much easier to tap for people with some disabilities. Additionaly buttons have more
-decriptive labels than usual buttons. I also decided to use animation
+decriptive labels than usual buttons.
+
+## Features
+### Main Screen
+Screen where all of help entries are displayed.
