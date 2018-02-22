@@ -35,3 +35,8 @@ Screen where all of help entries are displayed. For now there are only two: *Sen
 <img src="https://github.com/nani92/android-for-dummies/blob/gh-pages/Screen%20Shot%202018-02-21%20at%2019.07.21.png" width=200/>
 
 ### Send image
+Provides general information about sending image and shows how *share* icon looks like. There is also more detailed guide showing step by step how to send image.
+
+<img src="https://github.com/nani92/android-for-dummies/blob/gh-pages/Screen%20Shot%202018-02-21%20at%2019.07.36.png" height=350/><img src="https://github.com/nani92/android-for-dummies/blob/gh-pages/Screen%20Shot%202018-02-21%20at%2019.08.00.png" height=350/><img src="https://github.com/nani92/android-for-dummies/blob/gh-pages/Screen%20Shot%202018-02-21%20at%2019.08.18.png" height=350/><img src="https://github.com/nani92/android-for-dummies/blob/gh-pages/Screen%20Shot%202018-02-21%20at%2019.08.36.png" height=350/>
+
+### Change orientation
