@@ -1,4 +1,5 @@
 # E-daughter
+<img src="https://github.com/nani92/android-for-dummies/blob/gh-pages/web_hi_res_512.png" width=100 heigt=100/>
 E-daughter is an android application that aims to teach and help users that struggles with using android smartphones.
 
 ## Idea
@@ -29,4 +30,8 @@ decriptive labels than usual buttons.
 
 ## Features
 ### Main Screen
-Screen where all of help entries are displayed.
+Screen where all of help entries are displayed. For now there are only two: *Send image* and *Change orientation*.
+
+<img src="https://github.com/nani92/android-for-dummies/blob/gh-pages/Screen%20Shot%202018-02-21%20at%2019.07.21.png" width=200/>
+
+### Send image
