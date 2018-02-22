@@ -40,3 +40,4 @@ Provides general information about sending image and shows how *share* icon look
 <img src="https://github.com/nani92/android-for-dummies/blob/gh-pages/Screen%20Shot%202018-02-21%20at%2019.07.36.png" height=350/><img src="https://github.com/nani92/android-for-dummies/blob/gh-pages/Screen%20Shot%202018-02-21%20at%2019.08.00.png" height=350/><img src="https://github.com/nani92/android-for-dummies/blob/gh-pages/Screen%20Shot%202018-02-21%20at%2019.08.18.png" height=350/><img src="https://github.com/nani92/android-for-dummies/blob/gh-pages/Screen%20Shot%202018-02-21%20at%2019.08.36.png" height=350/>
 
 ### Change orientation
+Provides general information about available settings of phone orientation. There is also more detailed guide showing how to change orientation. Application also helps with changing those settings.
